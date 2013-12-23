@@ -1,0 +1,20 @@
+//
+//  MBAAction.m
+//  Menu Bar App
+//
+//  Created by Nathan Greenstein on 12/23/13.
+//  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
+//
+
+#import "MBAAction.h"
+
+@implementation MBAAction
+
+- (void)enable:(BOOL)enable {
+	// Subclasses do the actual work to enable/disable here, e.g. changing a system preference file.
+	// Don't forget to make the delgate call.
+	
+	[self.delegate action:self didEnable:enable withError:nil];
+}
+
+@end

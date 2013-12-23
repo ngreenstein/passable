@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu id="Nwc-jS-A6r">
+            <items>
+                <menuItem title="Control..." enabled="NO" id="r3i-rd-Lzt">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Hot Corners" state="on" id="yyX-CL-q4X">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="hotCornersClicked:" target="494" id="Orj-dm-LG5"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Natural Scrolling" state="on" id="wGC-Kb-CIc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="naturalScrollingClciked:" target="494" id="Kay-ji-1yL"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Notification Center" state="on" id="eSx-p1-YCx">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="notificationCenterClicked:" target="494" id="fhC-Bo-Rfe"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="2Na-qk-kyQ"/>
+                <menuItem title="About..." id="6Lf-QC-aoS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="aboutClicked:" target="494" id="jSl-AD-I5G"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="8LQ-2e-m1e"/>
+                <menuItem title="Quit" keyEquivalent="q" id="5FK-qn-6Ml">
+                    <connections>
+                        <action selector="quitClicked:" target="494" id="xvW-je-36n"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="494" id="mzv-pl-72W"/>
+            </connections>
+        </menu>
+        <customObject id="494" customClass="MBAAppDelegate">
+            <connections>
+                <outlet property="hotCornersMenuItem" destination="yyX-CL-q4X" id="BWv-0V-Gih"/>
+                <outlet property="menu" destination="Nwc-jS-A6r" id="5YL-NQ-0if"/>
+                <outlet property="notificationCenterMenuItem" destination="eSx-p1-YCx" id="dGV-QS-Ojq"/>
+                <outlet property="scrollingMenuItem" destination="wGC-Kb-CIc" id="KQk-Zb-CtA"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+    </objects>
+</document>
