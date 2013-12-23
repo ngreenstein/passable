@@ -191,7 +191,7 @@
 	if (self.controlScrolling) {
 		[actions addObject:self.scrollingAction];
 	}
-	if (self.notificationsAction) {
+	if (self.controlNotifications) {
 		[actions addObject:self.notificationsAction];
 	}
 	return [actions copy];

@@ -50,7 +50,7 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 		NSArray *orderedActionPrefsKeys = @[kDockTopLeftActionPrefKey, kDockTopRightActionPrefKey, kDockBottomLeftActionPrefKey, kDockBottomRightActionPrefKey];
 		NSArray *orderedModifierPrefsKeys = @[kDockTopLeftModifierPrefKey, kDockTopRightModifierPrefKey, kDockBottomLeftModifierPrefKey, kDockBottomRightModifierPrefKey];
 		
-		for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner < kBottomRightScreenCorner; screenCorner ++) {
+		for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner <= kBottomRightScreenCorner; screenCorner ++) {
 			
 //			id storedActionValue = storedActions[screenCorner];
 			id storedModifierValue = storedModifiers[screenCorner];
@@ -82,7 +82,7 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 		[defaults setObject:oldActions forKey:kStoredHotCornerActionsPrefKey];
 		[defaults setObject:oldModifiers forKey:kStoredHotCornerModifiersPrefKey];
 		
-		for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner < kBottomRightScreenCorner; screenCorner ++) {
+		for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner <= kBottomRightScreenCorner; screenCorner ++) {
 			// Only add the command key modifier if the corner has some action assigned to it and doesn't already have a modifier key.
 			if (![oldActions[screenCorner] isEqualToNumber:noActionId] && [oldModifiers[screenCorner] isEqualToNumber:noKeyId]) {
 				[self setHotCorner:screenCorner toAction:oldActions[screenCorner] withModifierMask:commandKeyId];
