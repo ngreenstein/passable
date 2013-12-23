@@ -11,6 +11,12 @@
 @implementation MBAAction
 
 - (void)enable:(BOOL)enable {
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		[self enableNow:enable];
+	});
+}
+
+- (void)enableNow:(BOOL)enable {
 	// Subclasses do the actual work to enable/disable here, e.g. changing a system preference file.
 	// Don't forget to make the delgate call.
 	

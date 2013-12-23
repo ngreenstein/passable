@@ -17,7 +17,10 @@
 
 @interface MBAAction : NSObject
 
+// Enable/disable the thing that this action controls (e.g. hot corners).
 - (void)enable:(BOOL)enable;
+// -enable: should be async whenever possible. This is the synchronous alternative, and what -enable: relies on.
+- (void)enableNow:(BOOL)enable;
 
 @property (nonatomic, weak) id <MBAActionDelegate> delegate;
 

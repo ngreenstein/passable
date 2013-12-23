@@ -22,7 +22,7 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 
 @implementation MBAHotCornersAction
 
-- (void)enable:(BOOL)enable {
+- (void)enableNow:(BOOL)enable {
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	NSDictionary *currentPrefs = [defaults persistentDomainForName:kDockPrefsDomain];

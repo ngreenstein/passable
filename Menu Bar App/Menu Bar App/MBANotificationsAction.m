@@ -17,7 +17,7 @@
 // This means that there will be one minute at 3:00 AM where notifications are enabled, which isn't ideal.
 // [TODO ngreenstein] Add a timer to change the gap minute to something else before it is hit.
 
-- (void)enable:(BOOL)enable {
+- (void)enableNow:(BOOL)enable {
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	

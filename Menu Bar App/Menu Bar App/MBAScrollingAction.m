@@ -17,7 +17,7 @@ extern void CGSSetSwipeScrollDirection(const CGSConnection connection, BOOL natu
 
 @implementation MBAScrollingAction
 
-- (void)enable:(BOOL)enable {
+- (void)enableNow:(BOOL)enable {
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
