@@ -5,7 +5,7 @@
 	<key>controlHotCornersEnabled</key>
 	<true/>
 	<key>controlScrollingEnabled</key>
-	<true/>
+	<false/>
 	<key>controlNotificationsEnabled</key>
 	<true/>
 </dict>

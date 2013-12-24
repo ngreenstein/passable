@@ -22,16 +22,16 @@
                         <action selector="hotCornersClicked:" target="494" id="Orj-dm-LG5"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Natural Scrolling" state="on" id="wGC-Kb-CIc">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="naturalScrollingClciked:" target="494" id="Kay-ji-1yL"/>
-                    </connections>
-                </menuItem>
                 <menuItem title="Notifications" state="on" id="eSx-p1-YCx">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="notificationCenterClicked:" target="494" id="fhC-Bo-Rfe"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Scroll Direction" id="wGC-Kb-CIc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="naturalScrollingClciked:" target="494" id="Kay-ji-1yL"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="2Na-qk-kyQ"/>
