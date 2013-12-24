@@ -38,7 +38,7 @@ extern void CGSSetSwipeScrollDirection(const CGSConnection connection, BOOL natu
 }
 
 - (NSString *)description {
-	return NSLocalizedString(@"natural scrolling direction", nil);
+	return NSLocalizedString(@"natural scrolling direction", @"action description");
 }
 
 @end

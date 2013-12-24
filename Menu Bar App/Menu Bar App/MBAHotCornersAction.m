@@ -116,7 +116,7 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 }
 
 - (NSString *)description {
-	return NSLocalizedString(@"hot corners", nil);
+	return NSLocalizedString(@"hot corners", @"action description");
 }
 
 @end

@@ -54,7 +54,7 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="8LQ-2e-m1e"/>
-                <menuItem title="Quit" keyEquivalent="q" id="5FK-qn-6Ml">
+                <menuItem title="Quit AppName" keyEquivalent="q" id="5FK-qn-6Ml">
                     <connections>
                         <action selector="quitClicked:" target="494" id="xvW-je-36n"/>
                     </connections>

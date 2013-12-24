@@ -77,7 +77,7 @@
 			NSMutableDictionary *errorInfo = [@{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to clean up after re-enabling notifications.", nil),
 												NSLocalizedFailureReasonErrorKey:NSLocalizedString(@"Unable to sync NSUserDefaults to delete old start/end times.", nil)} mutableCopy];
 			if (error) {
-				NSLog(@"Uh oh. Multiple errors encountered when re-enabling notifications. Old error saved in new error's userInfo dict.");
+				NSLog(NSLocalizedString(@"Uh oh. Multiple errors encountered when re-enabling notifications. Old error saved in new error's userInfo dict.", nil));
 				[errorInfo setObject:[error copy] forKey:kErrorOldErrorKey];
 			}
 			error = [NSError errorWithDomain:kErrorDomain code:kErrorUnableToSynchronizePrefs userInfo:errorInfo];
@@ -122,7 +122,7 @@
 }
 
 - (NSString *)description {
-	return NSLocalizedString(@"notifications", nil);
+	return NSLocalizedString(@"notifications", @"action description");
 }
 
 @end

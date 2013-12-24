@@ -11,6 +11,7 @@
 		CD0EE46D1868AFE400409D00 /* MBAAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE46C1868AFE400409D00 /* MBAAction.m */; };
 		CD0EE4701868B26900409D00 /* MBAScrollingAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE46F1868B26900409D00 /* MBAScrollingAction.m */; };
 		CD0EE4731868B39400409D00 /* MBANotificationsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE4721868B39400409D00 /* MBANotificationsAction.m */; };
+		CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD13B084186A4E9100AF0EDA /* Localizable.strings */; };
 		CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6D9751184A9DB50078A9AB /* Cocoa.framework */; };
 		CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD6D975A184A9DB50078A9AB /* InfoPlist.strings */; };
 		CD6D975E184A9DB50078A9AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D975D184A9DB50078A9AB /* main.m */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD003A27186A48F300678EE1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CD003A28186A48F300678EE1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = es; path = es.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CD003A29186A48F300678EE1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD0EE4681868ACA200409D00 /* MBAHotCornersAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAHotCornersAction.h; sourceTree = "<group>"; };
 		CD0EE4691868ACA200409D00 /* MBAHotCornersAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAHotCornersAction.m; sourceTree = "<group>"; };
 		CD0EE46B1868AFE400409D00 /* MBAAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAAction.h; sourceTree = "<group>"; };
@@ -45,6 +49,10 @@
 		CD0EE46F1868B26900409D00 /* MBAScrollingAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAScrollingAction.m; sourceTree = "<group>"; };
 		CD0EE4711868B39400409D00 /* MBANotificationsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBANotificationsAction.h; sourceTree = "<group>"; };
 		CD0EE4721868B39400409D00 /* MBANotificationsAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBANotificationsAction.m; sourceTree = "<group>"; };
+		CD13B07A186A4C4100AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		CD13B07C186A4C4100AF0EDA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		CD13B086186A4E9800AF0EDA /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD13B087186A4E9E00AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD6D974E184A9DB50078A9AB /* Menu Bar App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6D9751184A9DB50078A9AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CD6D9754184A9DB50078A9AB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -165,6 +173,7 @@
 		CD6D9758184A9DB50078A9AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD13B084186A4E9100AF0EDA /* Localizable.strings */,
 				CD6D9759184A9DB50078A9AB /* Menu Bar App-Info.plist */,
 				CD6D975A184A9DB50078A9AB /* InfoPlist.strings */,
 				CD6D975D184A9DB50078A9AB /* main.m */,
@@ -259,6 +268,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = CD6D9745184A9DB50078A9AB;
 			productRefGroup = CD6D974F184A9DB50078A9AB /* Products */;
@@ -277,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */,
+				CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */,
 				CD6D976A184A9DB50078A9AB /* Images.xcassets in Resources */,
 				CD8CC8EF184BBC97005BDEF6 /* DefaultPreferenceValues.plist in Resources */,
 				CD6D9762184A9DB50078A9AB /* Credits.rtf in Resources */,
@@ -328,10 +339,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CD13B084186A4E9100AF0EDA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD13B086186A4E9800AF0EDA /* es */,
+				CD13B087186A4E9E00AF0EDA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CD6D975A184A9DB50078A9AB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CD6D975B184A9DB50078A9AB /* en */,
+				CD003A27186A48F300678EE1 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -340,6 +361,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD6D9761184A9DB50078A9AB /* en */,
+				CD003A28186A48F300678EE1 /* es */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -348,6 +370,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD6D9767184A9DB50078A9AB /* Base */,
+				CD13B07A186A4C4100AF0EDA /* en */,
+				CD13B07C186A4C4100AF0EDA /* es */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -356,6 +380,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD6D9779184A9DB50078A9AB /* en */,
+				CD003A29186A48F300678EE1 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

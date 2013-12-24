@@ -1,0 +1,24 @@
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "5FK-qn-6Ml"; */
+"5FK-qn-6Ml.title" = "Salir de AppName";
+
+/* Class = "NSMenuItem"; title = "About AppName"; ObjectID = "6Lf-QC-aoS"; */
+"6Lf-QC-aoS.title" = "Acera de AppName";
+
+/* Class = "NSMenuItem"; title = "Donate"; ObjectID = "8Vv-O3-Ltc"; */
+"8Vv-O3-Ltc.title" = "Donar";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "HAX-dy-F6T"; */
+"HAX-dy-F6T.title" = "Ayuda";
+
+/* Class = "NSMenuItem"; title = "Notifications"; ObjectID = "eSx-p1-YCx"; */
+"eSx-p1-YCx.title" = "Notificaciones";
+
+/* Class = "NSMenuItem"; title = "Control..."; ObjectID = "r3i-rd-Lzt"; */
+"r3i-rd-Lzt.title" = "Controlar...";
+
+/* Class = "NSMenuItem"; title = "Scroll Direction"; ObjectID = "wGC-Kb-CIc"; */
+"wGC-Kb-CIc.title" = "Dirección del desplazamiento";
+
+/* Class = "NSMenuItem"; title = "Hot Corners"; ObjectID = "yyX-CL-q4X"; */
+"yyX-CL-q4X.title" = "Esquinas activas";
