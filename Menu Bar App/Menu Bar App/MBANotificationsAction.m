@@ -37,6 +37,7 @@
 	CFNumberRef newEnd = nil;
 	
 	BOOL updateNotificationCenterPrefs = YES;
+	NSError *error;
 	
 	if (enable) {
 		
@@ -48,28 +49,38 @@
 		
 		// If the user doesn't have a schedule set, the values are nil, so we store -1 in that case
 		// so we can distinguish between errors/data loss and the user not having a previous shcedule.
-		// [TODO ngreenstein] Update this to use NSError and report it to delegate.
 		
 		if (!storedStart) {
-			NSLog(@"!!! ERROR: Stored DND start time not found.");
-			updateNotificationCenterPrefs = NO;
+			NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to restore user's previous DND start time.", nil),
+										NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:NSLocalizedString(@"Unable to find stored start time at defaults key '%@'.", nil), kStoredDNDStartPrefKey]};
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorStoredValueNotFound userInfo:errorInfo];
 		} else if ([storedStart integerValue] >= 0) { // Leave it as nil if we stored it as -1 so we delete the key.
 			newStart = (__bridge CFNumberRef)storedStart;
 		}
+		// Check if the user has updated their prefs manually and don't revert if they have.
 		if ([currentStart isNotEqualTo:customStart]) {
-			NSLog(@"!!! ERROR: User changed their DND start time, so we won't revert.");
 			updateNotificationCenterPrefs = NO;
 		}
 		
 		if (!storedEnd) {
-			NSLog(@"!!! ERROR: Stored DND end time not found.");
-			updateNotificationCenterPrefs = NO;
+			NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to restore user's previous DND end time.", nil),
+										NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:NSLocalizedString(@"Unable to find stored end time at defaults key '%@'.", nil), kStoredDNDEndPrefKey]};
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorStoredValueNotFound userInfo:errorInfo];
 		} else if ([storedEnd integerValue] >= 0) {
 			newEnd = (__bridge CFNumberRef)storedEnd;
 		}
 		if ([currentEnd isNotEqualTo:customEnd]) {
-			NSLog(@"!!! ERROR: User changed their DND end time, so we won't revert.");
 			updateNotificationCenterPrefs = NO;
+		}
+		
+		if (![defaults synchronize]) {
+			NSMutableDictionary *errorInfo = [@{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to clean up after re-enabling notifications.", nil),
+												NSLocalizedFailureReasonErrorKey:NSLocalizedString(@"Unable to sync NSUserDefaults to delete old start/end times.", nil)} mutableCopy];
+			if (error) {
+				NSLog(@"Uh oh. Multiple errors encountered when re-enabling notifications. Old error saved in new error's userInfo dict.");
+				[errorInfo setObject:[error copy] forKey:kErrorOldErrorKey];
+			}
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorUnableToSynchronizePrefs userInfo:errorInfo];
 		}
 		
 	} else {
@@ -86,9 +97,14 @@
 		
 		newStart = (__bridge CFNumberRef)customStart;
 		newEnd = (__bridge CFNumberRef)customEnd;
+		
+		if (![defaults synchronize]) {
+			NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to disable notifications.", nil),
+										NSLocalizedFailureReasonErrorKey:NSLocalizedString(@"Unable to sync NSUserDefaults to store old start/end times.", nil)};
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorUnableToSynchronizePrefs userInfo:errorInfo];
+			updateNotificationCenterPrefs = NO; // Don't change to the new prefs if we can't save the old ones.
+		}
 	}
-	
-	[defaults synchronize];
 	
 	if (updateNotificationCenterPrefs) {
 		CFPreferencesSetValue(kNotificationCenterDNDStartPrefKey, newStart, kNotificationCenterPrefsDomain, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
@@ -101,12 +117,12 @@
 																	 userInfo:nil
 														   deliverImmediately:YES];
 	}
-	
-	[self.delegate action:self didEnable:enable withError:nil];
+
+	[self.delegate action:self didEnable:enable withError:error];
 }
 
 - (NSString *)description {
-	return @"Enable/disable Do Not Disturb mode in Notification Center.";
+	return NSLocalizedString(@"notifications", nil);
 }
 
 @end

@@ -19,21 +19,26 @@ extern void CGSSetSwipeScrollDirection(const CGSConnection connection, BOOL natu
 
 - (void)enableNow:(BOOL)enable {
 	
-	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
-	NSMutableDictionary *globalPrefs = [[defaults persistentDomainForName:NSGlobalDomain] mutableCopy];
+//	NSMutableDictionary *globalPrefs = [[defaults persistentDomainForName:NSGlobalDomain] mutableCopy];
     
     const CGSConnection connection = _CGSDefaultConnection();
     CGSSetSwipeScrollDirection(connection, enable);
-    
-    [globalPrefs setValue:[NSNumber numberWithBool:enable] forKey:@"com.apple.swipescrolldirection"];
-    
-    [defaults setPersistentDomain:globalPrefs forName:NSGlobalDomain];
-	[defaults synchronize];
+
+	// Doesn't look like any of this is necessary.
+//  [globalPrefs setValue:[NSNumber numberWithBool:enable] forKey:@"com.apple.swipescrolldirection"];
+//    
+//  [defaults setPersistentDomain:globalPrefs forName:NSGlobalDomain];
+//	[defaults synchronize];
 	
-//	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"SwipeScrollDirectionDidChangeNotification" object:nil userInfo:nil]; // Doesn't look like this is necessary.
+//	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"SwipeScrollDirectionDidChangeNotification" object:nil userInfo:nil];
 	
-	[self.delegate action:self didEnable:enable withError:nil];
+	[self.delegate action:self didEnable:enable withError:nil]; // No catchable errors here
+}
+
+- (NSString *)description {
+	return NSLocalizedString(@"natural scrolling direction", nil);
 }
 
 @end

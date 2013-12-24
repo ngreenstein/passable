@@ -200,7 +200,9 @@
 #pragma mark - MBAActionDelegate Methods
 
 - (void)action:(MBAAction *)action didEnable:(BOOL)enabled withError:(NSError *)error {
-	NSLog(@"action finished. from delegate");
+	if (error) {
+		NSLog(@"Error %li occured when %@ the action '%@'.", (long)error.code, enabled ? @"enabling" : @"disabling", action.description);
+	}
 }
 
 @end

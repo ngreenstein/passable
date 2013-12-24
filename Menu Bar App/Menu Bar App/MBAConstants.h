@@ -19,7 +19,6 @@ static NSString *const kControlHotCornersPrefKey = @"controlHotCornersEnabled";
 static NSString *const kControlScrollingPrefKey = @"controlScrollingEnabled";
 static NSString *const kControlNotificationsPrefKey = @"controlNotificationsEnabled";
 
-static NSString *const kStoredHotCornerActionsPrefKey = @"oldHotCornerActions";
 static NSString *const kStoredHotCornerModifiersPrefKey = @"oldHotCornerModifiers";
 
 #pragma mark - Dock Stuff
@@ -57,5 +56,13 @@ static NSUInteger const kNotificationCenterDNDEndTime = 180;
 
 static NSString *const kStoredDNDStartPrefKey = @"oldDndStart";
 static NSString *const kStoredDNDEndPrefKey = @"oldDndEnd";
+
+#pragma mark - Errors
+static NSString *const kErrorDomain = @"MBAErrorDomain";
+static NSString *const kErrorOldErrorKey = @"oldErrorObject";
+typedef NS_ENUM(NSInteger, MBAErrorCode) {
+	kErrorUnableToSynchronizePrefs,
+	kErrorStoredValueNotFound,
+};
 
 #endif

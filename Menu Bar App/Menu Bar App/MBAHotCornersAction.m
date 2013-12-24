@@ -31,28 +31,29 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 	NSNumber *commandKeyId = [NSNumber numberWithUnsignedInteger:kDockCommandKeyIdentifier];
 	NSNumber *noKeyId = [NSNumber numberWithUnsignedInteger:kDockNoModifierKeyIdnetifier];
 	
+	NSError *error;
+	
 	if (enable) {
 		
-		NSArray *storedActions = [defaults arrayForKey:kStoredHotCornerActionsPrefKey];
 		NSArray *storedModifiers = [defaults arrayForKey:kStoredHotCornerModifiersPrefKey];
 		
-		if (!storedActions) {
-			// [TODO ngreenstein] Update all these error conditions to use NSError and report them to the delegate.
-			NSLog(@"!!! ERROR: Cannot find saved modifiers (defaults key \"%@\").", kStoredHotCornerActionsPrefKey);
-		}
 		if (!storedModifiers) {
-			NSLog(@"!!! ERROR: Cannot find saved modifiers (defaults key \"%@\").", kStoredHotCornerModifiersPrefKey);
+			
+			NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to restore user's previous hot corner modifier keys.", nil),
+										NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:NSLocalizedString(@"Unable to find stored modifiers at defaults key '%@'.", nil), kStoredHotCornerModifiersPrefKey]};
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorStoredValueNotFound userInfo:errorInfo];
+			
+			// If we somehow lose the stored modifiers, make the assumption that the user didn't have any modifiers setup before and remove any command-key modifiers. Note that any modifiers other than command-key ones will, as normal, not be removed.
+			storedModifiers = @[noKeyId, noKeyId, noKeyId, noKeyId];
 		}
 		
-		[defaults removeObjectForKey:kStoredHotCornerActionsPrefKey];
 		[defaults removeObjectForKey:kStoredHotCornerModifiersPrefKey];
 		
 		NSArray *orderedActionPrefsKeys = @[kDockTopLeftActionPrefKey, kDockTopRightActionPrefKey, kDockBottomLeftActionPrefKey, kDockBottomRightActionPrefKey];
 		NSArray *orderedModifierPrefsKeys = @[kDockTopLeftModifierPrefKey, kDockTopRightModifierPrefKey, kDockBottomLeftModifierPrefKey, kDockBottomRightModifierPrefKey];
 		
 		for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner <= kBottomRightScreenCorner; screenCorner ++) {
-			
-//			id storedActionValue = storedActions[screenCorner];
+
 			id storedModifierValue = storedModifiers[screenCorner];
 			
 			NSString *actionPrefsKey = orderedActionPrefsKeys[screenCorner];
@@ -61,43 +62,61 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 			id currentActionValue = currentPrefs[actionPrefsKey];
 			id currentModifierValue = currentPrefs[modifierPrefsKey];
 			
-			if ([currentModifierValue isNotEqualTo:storedModifierValue] && [currentModifierValue isEqual:commandKeyId]) { // Check whether this is a value that the app changed when disabling hot corners.
+			// Check whether this is a value that the app changed when disabling hot corners.
+			if ([currentModifierValue isNotEqualTo:storedModifierValue] && [currentModifierValue isEqual:commandKeyId]) {
 				[self setHotCorner:screenCorner toAction:currentActionValue withModifierMask:storedModifierValue];
 			}
 			
 		}
 		
+		if (![defaults synchronize]) {
+			NSMutableDictionary *errorInfo = [@{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to clean up after re-enabling hot corners.", nil),
+												NSLocalizedFailureReasonErrorKey:NSLocalizedString(@"Unable to sync NSUserDefaults to delete old modifiers.", nil)} mutableCopy];
+			if (error) {
+				NSLog(@"Uh oh. Multiple errors encountered when re-enabling hot corners. Old error saved in new error's userInfo dict.");
+				[errorInfo setObject:[error copy] forKey:kErrorOldErrorKey];
+			}
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorUnableToSynchronizePrefs userInfo:errorInfo];
+		}
+		
 	} else { // Disable
 		
-		NSArray *oldActions = @[currentPrefs[kDockTopLeftActionPrefKey],
-								currentPrefs[kDockTopRightActionPrefKey],
-								currentPrefs[kDockBottomLeftActionPrefKey],
-								currentPrefs[kDockBottomRightActionPrefKey]];
+		NSArray *currentActions = @[currentPrefs[kDockTopLeftActionPrefKey],
+									currentPrefs[kDockTopRightActionPrefKey],
+									currentPrefs[kDockBottomLeftActionPrefKey],
+									currentPrefs[kDockBottomRightActionPrefKey]];
 		
-		NSArray *oldModifiers = @[currentPrefs[kDockTopLeftModifierPrefKey],
-								  currentPrefs[kDockTopRightModifierPrefKey],
-								  currentPrefs[kDockBottomLeftModifierPrefKey],
-								  currentPrefs[kDockBottomRightModifierPrefKey]];
+		NSArray *currentModifiers = @[currentPrefs[kDockTopLeftModifierPrefKey],
+									  currentPrefs[kDockTopRightModifierPrefKey],
+									  currentPrefs[kDockBottomLeftModifierPrefKey],
+									  currentPrefs[kDockBottomRightModifierPrefKey]];
 		
-		[defaults setObject:oldActions forKey:kStoredHotCornerActionsPrefKey];
-		[defaults setObject:oldModifiers forKey:kStoredHotCornerModifiersPrefKey];
+		[defaults setObject:currentModifiers forKey:kStoredHotCornerModifiersPrefKey];
 		
-		for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner <= kBottomRightScreenCorner; screenCorner ++) {
-			// Only add the command key modifier if the corner has some action assigned to it and doesn't already have a modifier key.
-			if (![oldActions[screenCorner] isEqualToNumber:noActionId] && [oldModifiers[screenCorner] isEqualToNumber:noKeyId]) {
-				[self setHotCorner:screenCorner toAction:oldActions[screenCorner] withModifierMask:commandKeyId];
+		if ([defaults synchronize]) { // Only change the modfiers if we can save the old ones successfully.
+			for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner <= kBottomRightScreenCorner; screenCorner ++) {
+				// Only add the command key modifier if the corner has some action assigned to it and doesn't already have a modifier key.
+				if (![currentActions[screenCorner] isEqualToNumber:noActionId] && [currentModifiers[screenCorner] isEqualToNumber:noKeyId]) {
+					[self setHotCorner:screenCorner toAction:currentActions[screenCorner] withModifierMask:commandKeyId];
+				}
 			}
+		} else {
+			NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to disable hot corners.", nil),
+												NSLocalizedFailureReasonErrorKey:NSLocalizedString(@"Unable to sync NSUserDefaults to save old modifiers.", nil)};
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorUnableToSynchronizePrefs userInfo:errorInfo];
 		}
 	}
 	
-	[defaults synchronize];
-	
-	[self.delegate action:self didEnable:enable withError:nil];
+	[self.delegate action:self didEnable:enable withError:error];
 	
 }
 
 - (void)setHotCorner:(MBAScreenCorner)screenCorner toAction:(NSNumber *)action withModifierMask:(NSNumber *)modifierMask {
 	CoreDockSetExposeCornerActionWithModifier([action intValue], screenCorner, [modifierMask intValue]);
+}
+
+- (NSString *)description {
+	return NSLocalizedString(@"hot corners", nil);
 }
 
 @end
