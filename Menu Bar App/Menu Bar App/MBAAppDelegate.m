@@ -110,9 +110,6 @@
 	self.controlNotifications = (sender.state != NSOnState);
 }
 
-- (IBAction)preferencesClicked:(NSMenuItem *)sender {
-	NSLog(@"Time to show the Preferences window.");
-}
 - (IBAction)donateClicked:(NSMenuItem *)sender {
 	NSLog(@"Time to go to the donation website. <3");
 }

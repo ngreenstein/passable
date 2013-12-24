@@ -35,11 +35,6 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="2Na-qk-kyQ"/>
-                <menuItem title="Preferences..." keyEquivalent="," id="EEe-g4-Iiq">
-                    <connections>
-                        <action selector="preferencesClicked:" target="494" id="YV1-B0-QOs"/>
-                    </connections>
-                </menuItem>
                 <menuItem title="Donate" id="8Vv-O3-Ltc">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -76,7 +71,6 @@
                 <outlet property="hotCornersMenuItem" destination="yyX-CL-q4X" id="BWv-0V-Gih"/>
                 <outlet property="menu" destination="Nwc-jS-A6r" id="5YL-NQ-0if"/>
                 <outlet property="notificationCenterMenuItem" destination="eSx-p1-YCx" id="dGV-QS-Ojq"/>
-                <outlet property="preferencesMenuItem" destination="EEe-g4-Iiq" id="Gl4-gE-oGB"/>
                 <outlet property="scrollingMenuItem" destination="wGC-Kb-CIc" id="KQk-Zb-CtA"/>
             </connections>
         </customObject>
