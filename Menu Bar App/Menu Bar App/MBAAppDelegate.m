@@ -26,6 +26,7 @@
 @property (weak) IBOutlet NSMenuItem *scrollingMenuItem;
 @property (weak) IBOutlet NSMenuItem *notificationCenterMenuItem;
 
+
 @property (nonatomic) BOOL controlHotCorners;
 @property (nonatomic) BOOL controlScrolling;
 @property (nonatomic) BOOL controlNotifications;
@@ -109,10 +110,18 @@
 	self.controlNotifications = (sender.state != NSOnState);
 }
 
+- (IBAction)preferencesClicked:(NSMenuItem *)sender {
+	NSLog(@"Time to show the Preferences window.");
+}
+- (IBAction)donateClicked:(NSMenuItem *)sender {
+	NSLog(@"Time to go to the donation website. <3");
+}
 - (IBAction)aboutClicked:(id)sender {
 	NSLog(@"Time to show the About window.");
 }
-
+- (IBAction)helpClicked:(NSMenuItem *)sender {
+	NSLog(@"Time to open Help.");
+}
 - (IBAction)quitClicked:(id)sender {
 	[[NSApplication sharedApplication] terminate:self];
 }
