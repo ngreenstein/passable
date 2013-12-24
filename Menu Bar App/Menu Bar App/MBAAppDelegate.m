@@ -111,13 +111,13 @@
 }
 
 - (IBAction)donateClicked:(NSMenuItem *)sender {
-	NSLog(@"Time to go to the donation website. <3");
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://apple.com"]];
 }
 - (IBAction)aboutClicked:(id)sender {
-	NSLog(@"Time to show the About window.");
+	[NSApp orderFrontStandardAboutPanel:self];
 }
 - (IBAction)helpClicked:(NSMenuItem *)sender {
-	NSLog(@"Time to open Help.");
+	[NSApp showHelp:self];
 }
 - (IBAction)quitClicked:(id)sender {
 	[[NSApplication sharedApplication] terminate:self];
