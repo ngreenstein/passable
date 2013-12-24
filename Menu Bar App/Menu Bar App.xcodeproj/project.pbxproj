@@ -51,15 +51,15 @@
 		CD0EE4721868B39400409D00 /* MBANotificationsAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBANotificationsAction.m; sourceTree = "<group>"; };
 		CD13B07A186A4C4100AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		CD13B07C186A4C4100AF0EDA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		CD13B086186A4E9800AF0EDA /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CD13B087186A4E9E00AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD13B086186A4E9800AF0EDA /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD13B087186A4E9E00AF0EDA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD13B08C186A541D00AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD6D974E184A9DB50078A9AB /* Menu Bar App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6D9751184A9DB50078A9AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CD6D9754184A9DB50078A9AB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CD6D9755184A9DB50078A9AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CD6D9756184A9DB50078A9AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD6D9759184A9DB50078A9AB /* Menu Bar App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Menu Bar App-Info.plist"; sourceTree = "<group>"; };
-		CD6D975B184A9DB50078A9AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD6D975D184A9DB50078A9AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD6D975F184A9DB50078A9AB /* Menu Bar App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu Bar App-Prefix.pch"; sourceTree = "<group>"; };
 		CD6D9761184A9DB50078A9AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -351,8 +351,8 @@
 		CD6D975A184A9DB50078A9AB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CD6D975B184A9DB50078A9AB /* en */,
 				CD003A27186A48F300678EE1 /* es */,
+				CD13B08C186A541D00AF0EDA /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
