@@ -49,9 +49,6 @@
                 </menuItem>
                 <menuItem title="Check for Updates..." id="139-3b-A4k">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="checkForUpdates:" target="pVN-nf-z18" id="KKe-ox-bak"/>
-                    </connections>
                 </menuItem>
                 <menuItem title="Help" id="HAX-dy-F6T">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -81,6 +78,5 @@
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
-        <customObject id="pVN-nf-z18" customClass="SUUpdater"/>
     </objects>
 </document>
