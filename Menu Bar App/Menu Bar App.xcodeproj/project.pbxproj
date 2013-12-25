@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD068C67186B6C700043A598 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD275895186B6C4F00619CC0 /* Sparkle.framework */; };
 		CD0EE46A1868ACA200409D00 /* MBAHotCornersAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE4691868ACA200409D00 /* MBAHotCornersAction.m */; };
 		CD0EE46D1868AFE400409D00 /* MBAAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE46C1868AFE400409D00 /* MBAAction.m */; };
 		CD0EE4701868B26900409D00 /* MBAScrollingAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE46F1868B26900409D00 /* MBAScrollingAction.m */; };
@@ -14,6 +15,7 @@
 		CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD13B084186A4E9100AF0EDA /* Localizable.strings */; };
 		CD13B095186B579D00AF0EDA /* Quincy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD13B094186B579D00AF0EDA /* Quincy.framework */; };
 		CD13B097186B58A600AF0EDA /* Quincy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD13B094186B579D00AF0EDA /* Quincy.framework */; };
+		CD275896186B6C4F00619CC0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD275895186B6C4F00619CC0 /* Sparkle.framework */; };
 		CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6D9751184A9DB50078A9AB /* Cocoa.framework */; };
 		CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD6D975A184A9DB50078A9AB /* InfoPlist.strings */; };
 		CD6D975E184A9DB50078A9AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D975D184A9DB50078A9AB /* main.m */; };
@@ -47,6 +49,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CD13B097186B58A600AF0EDA /* Quincy.framework in CopyFiles */,
+				CD068C67186B6C700043A598 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +73,7 @@
 		CD13B087186A4E9E00AF0EDA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD13B08C186A541D00AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD13B094186B579D00AF0EDA /* Quincy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quincy.framework; sourceTree = "<group>"; };
+		CD275895186B6C4F00619CC0 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CD6D974E184A9DB50078A9AB /* Menu Bar App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6D9751184A9DB50078A9AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CD6D9754184A9DB50078A9AB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -100,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */,
+				CD275896186B6C4F00619CC0 /* Sparkle.framework in Frameworks */,
 				CD13B095186B579D00AF0EDA /* Quincy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +158,7 @@
 		CD6D9750184A9DB50078A9AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD275895186B6C4F00619CC0 /* Sparkle.framework */,
 				CD13B094186B579D00AF0EDA /* Quincy.framework */,
 				CD6D9751184A9DB50078A9AB /* Cocoa.framework */,
 				CD6D9770184A9DB50078A9AB /* XCTest.framework */,
