@@ -19,7 +19,11 @@ static NSString *const kControlHotCornersPrefKey = @"controlHotCornersEnabled";
 static NSString *const kControlScrollingPrefKey = @"controlScrollingEnabled";
 static NSString *const kControlNotificationsPrefKey = @"controlNotificationsEnabled";
 
+static NSString *const kShowIntroWindowPrefKey = @"showIntroWindow";
+
 static NSString *const kStoredHotCornerModifiersPrefKey = @"oldHotCornerModifiers";
+static NSString *const kStoredDNDStartPrefKey = @"oldDndStart";
+static NSString *const kStoredDNDEndPrefKey = @"oldDndEnd";
 
 #pragma mark - Dock Stuff
 typedef NS_ENUM(NSUInteger, MBAScreenCorner) {
@@ -53,9 +57,6 @@ static CFStringRef const kNotificationCenterDNDStartPrefKey = (__bridge  CFStrin
 static CFStringRef const kNotificationCenterDNDEndPrefKey = (__bridge  CFStringRef)@"dndEnd";
 static NSUInteger const kNotificationCenterDNDStartTime = 181; // Minutes since midnight, = 3:01 AM.
 static NSUInteger const kNotificationCenterDNDEndTime = 180;
-
-static NSString *const kStoredDNDStartPrefKey = @"oldDndStart";
-static NSString *const kStoredDNDEndPrefKey = @"oldDndEnd";
 
 #pragma mark - Errors
 static NSString *const kErrorDomain = @"MBAErrorDomain";

@@ -1,4 +1,10 @@
-﻿/* action description */
+﻿/* No comment provided by engineer. */
+"Welcome to AppName!" = "¡Bienvenido a AppName!";
+
+/* No comment provided by engineer. */
+"Click the AppName icon in the menu bar to turn it on and off. Control + click it or right-click it for more options." = "Haga clic en el icono de AppName en la barra de menús para encenderlo y apagarlo. Haga Control + clic o clic con el botón derecho del ratón para más opciones.";
+
+/* action description */
 "hot corners" = "esquinas activas";
 
 /* action description */
@@ -34,7 +40,7 @@
 /* No comment provided by engineer. */
 "Unable to restore user's previous DND end time." = "Unable to restore user's previous DND end time.";
 
-/* No comment provided by engineer. */
+/* No comment provided by engineer	. */
 "Unable to restore user's previous DND start time." = "Unable to restore user's previous DND start time.";
 
 /* No comment provided by engineer. */

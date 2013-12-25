@@ -72,6 +72,13 @@
 	self.notificationsAction = [[MBANotificationsAction alloc] init];
 	self.notificationsAction.delegate = self;
 	
+	if ([defaults boolForKey:kShowIntroWindowPrefKey]) {
+		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Welcome to AppName!", nil) defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:NSLocalizedString(@"Click the AppName icon in the menu bar to turn it on and off. Control + click it or right-click it for more options.", nil)];
+		[alert runModal];
+		[defaults setBool:NO forKey:kShowIntroWindowPrefKey];
+		[defaults synchronize];
+	}
+	
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
