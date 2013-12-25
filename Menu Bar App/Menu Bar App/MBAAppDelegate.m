@@ -15,7 +15,9 @@
 #import "MBAScrollingAction.h"
 #import "MBANotificationsAction.h"
 
-@interface MBAAppDelegate () <NSMenuDelegate, MBAStatusItemViewDelegate, MBAActionDelegate>
+#import <Quincy/BWQuincyManager.h>
+
+@interface MBAAppDelegate () <NSMenuDelegate, MBAStatusItemViewDelegate, MBAActionDelegate, BWQuincyManagerDelegate>
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
 @property (nonatomic, strong) MBAStatusItemView *statusItemView;
@@ -79,6 +81,19 @@
 		[defaults synchronize];
 	}
 	
+	// Crash reporting.
+	[[BWQuincyManager sharedQuincyManager] setSubmissionURL:@"http://www.ngreenstein.com/quincy/crash_v200.php"];
+	[[BWQuincyManager sharedQuincyManager] setCompanyName:@"Nathan Greenstein"];
+	[[BWQuincyManager sharedQuincyManager] setDelegate:self];
+	
+}
+
+- (void) showMainApplicationWindow
+{
+    // launch the main app window
+    // remember not to automatically show the main window if using NIBs
+//    [window makeFirstResponder: nil];
+//    [window makeKeyAndOrderFront:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {

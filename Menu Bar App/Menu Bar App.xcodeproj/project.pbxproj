@@ -12,6 +12,8 @@
 		CD0EE4701868B26900409D00 /* MBAScrollingAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE46F1868B26900409D00 /* MBAScrollingAction.m */; };
 		CD0EE4731868B39400409D00 /* MBANotificationsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE4721868B39400409D00 /* MBANotificationsAction.m */; };
 		CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD13B084186A4E9100AF0EDA /* Localizable.strings */; };
+		CD13B095186B579D00AF0EDA /* Quincy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD13B094186B579D00AF0EDA /* Quincy.framework */; };
+		CD13B097186B58A600AF0EDA /* Quincy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD13B094186B579D00AF0EDA /* Quincy.framework */; };
 		CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6D9751184A9DB50078A9AB /* Cocoa.framework */; };
 		CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD6D975A184A9DB50078A9AB /* InfoPlist.strings */; };
 		CD6D975E184A9DB50078A9AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D975D184A9DB50078A9AB /* main.m */; };
@@ -37,6 +39,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD13B096186B589F00AF0EDA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD13B097186B58A600AF0EDA /* Quincy.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CD003A27186A48F300678EE1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD003A28186A48F300678EE1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = es; path = es.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -54,6 +69,7 @@
 		CD13B086186A4E9800AF0EDA /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD13B087186A4E9E00AF0EDA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD13B08C186A541D00AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CD13B094186B579D00AF0EDA /* Quincy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quincy.framework; sourceTree = "<group>"; };
 		CD6D974E184A9DB50078A9AB /* Menu Bar App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6D9751184A9DB50078A9AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CD6D9754184A9DB50078A9AB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -84,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */,
+				CD13B095186B579D00AF0EDA /* Quincy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +153,7 @@
 		CD6D9750184A9DB50078A9AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD13B094186B579D00AF0EDA /* Quincy.framework */,
 				CD6D9751184A9DB50078A9AB /* Cocoa.framework */,
 				CD6D9770184A9DB50078A9AB /* XCTest.framework */,
 				CD6D9753184A9DB50078A9AB /* Other Frameworks */,
@@ -211,6 +229,7 @@
 				CD6D974A184A9DB50078A9AB /* Sources */,
 				CD6D974B184A9DB50078A9AB /* Frameworks */,
 				CD6D974C184A9DB50078A9AB /* Resources */,
+				CD13B096186B589F00AF0EDA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -461,6 +480,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ngreenst/Dropbox/desktop/Projects/Normalizer\\ Menu\\ Bar\\ App/Menu\\ Bar\\ App",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menu Bar App/Menu Bar App-Prefix.pch";
 				INFOPLIST_FILE = "Menu Bar App/Menu Bar App-Info.plist";
@@ -474,6 +497,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ngreenst/Dropbox/desktop/Projects/Normalizer\\ Menu\\ Bar\\ App/Menu\\ Bar\\ App",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Menu Bar App/Menu Bar App-Prefix.pch";
 				INFOPLIST_FILE = "Menu Bar App/Menu Bar App-Info.plist";
