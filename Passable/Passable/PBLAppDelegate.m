@@ -75,10 +75,10 @@
 	self.notificationsAction = [[PBLNotificationsAction alloc] init];
 	self.notificationsAction.delegate = self;
 	
-	if ([defaults boolForKey:kShowIntroWindowPrefKey]) {
+	if (![defaults boolForKey:kDoNotShowIntroWindowPrefKey]) {
 		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Welcome to Passable!", nil) defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:NSLocalizedString(@"Click the Passable icon in the menu bar to turn it on and off. Control + click it or right-click it for more options.", nil)];
 		[alert runModal];
-		[defaults setBool:NO forKey:kShowIntroWindowPrefKey];
+		[defaults setBool:YES forKey:kDoNotShowIntroWindowPrefKey];
 		[defaults synchronize];
 	}
 	

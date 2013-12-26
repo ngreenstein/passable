@@ -8,7 +8,7 @@
 	<false/>
 	<key>controlNotificationsEnabled</key>
 	<true/>
-	<key>showIntroWindow</key>
-	<true/>
+	<key>doNotShowIntroWindow</key>
+	<false/>
 </dict>
 </plist>

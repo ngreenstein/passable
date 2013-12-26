@@ -187,7 +187,6 @@
 				CD6D9763184A9DB50078A9AB /* PBLAppDelegate.h */,
 				CD6D9764184A9DB50078A9AB /* PBLAppDelegate.m */,
 				CD0EE4671868AC8600409D00 /* Actions */,
-				CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */,
 				CD6D9785184AA39E0078A9AB /* PBLStatusItemView.h */,
 				CD6D9786184AA39E0078A9AB /* PBLStatusItemView.m */,
 				CD6D9766184A9DB50078A9AB /* MainMenu.xib */,
@@ -200,6 +199,7 @@
 		CD6D9758184A9DB50078A9AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */,
 				CD13B084186A4E9100AF0EDA /* Localizable.strings */,
 				CD6D9759184A9DB50078A9AB /* Passable-Info.plist */,
 				CD6D975A184A9DB50078A9AB /* InfoPlist.strings */,

@@ -19,7 +19,7 @@ static NSString *const kControlHotCornersPrefKey = @"controlHotCornersEnabled";
 static NSString *const kControlScrollingPrefKey = @"controlScrollingEnabled";
 static NSString *const kControlNotificationsPrefKey = @"controlNotificationsEnabled";
 
-static NSString *const kShowIntroWindowPrefKey = @"showIntroWindow";
+static NSString *const kDoNotShowIntroWindowPrefKey = @"doNotShowIntroWindow";
 
 static NSString *const kStoredHotCornerModifiersPrefKey = @"oldHotCornerModifiers";
 static NSString *const kStoredDNDStartPrefKey = @"oldDndStart";
