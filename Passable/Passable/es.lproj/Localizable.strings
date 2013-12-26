@@ -4,6 +4,9 @@
 /* No comment provided by engineer. */
 "Click the Passable icon in the menu bar to turn it on and off. Control + click it or right-click it for more options." = "Haga clic en el icono de Passable en la barra de menús para encenderlo y apagarlo. Haga Control + clic o clic con el botón derecho del ratón para más opciones.";
 
+/* tooltip for menu bar icon */
+"Click to turn Passable on and off. Right-click or Control + click for more options." = "Haga clic para encender y apagar Passable. Haga Control + clic o clic con el botón derecho del ratón para más opciones.";
+
 /* action description */
 "hot corners" = "esquinas activas";
 

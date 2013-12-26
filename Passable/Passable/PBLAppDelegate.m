@@ -54,6 +54,7 @@
 	statusItemView.delegate = self;
 	self.statusItem.view = statusItemView;
 	self.statusItemView = statusItemView;
+	self.statusItemView.toolTip = NSLocalizedString(@"Click to turn Passable on and off. Right-click or Control + click for more options.", @"tooltip for menu bar icon");
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	

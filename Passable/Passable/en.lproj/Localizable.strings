@@ -4,6 +4,9 @@
 /* No comment provided by engineer. */
 "Click the Passable icon in the menu bar to turn it on and off. Control + click it or right-click it for more options." = "Click the Passable icon in the menu bar to turn it on and off. Control + click it or right-click it for more options.";
 
+/* tooltip for menu bar icon */
+"Click to turn Passable on and off. Right-click or Control + click for more options." = "Click to turn Passable on and off. Right-click or Control + click for more options.";
+
 /* action description */
 "hot corners" = "hot corners";
 
