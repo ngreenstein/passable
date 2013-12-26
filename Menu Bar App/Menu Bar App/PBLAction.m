@@ -1,14 +1,14 @@
 //
-//  MBAAction.m
-//  Menu Bar App
+// PBLAction.m
+// Passable
 //
 //  Created by Nathan Greenstein on 12/23/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBAAction.h"
+#import "PBLAction.h"
 
-@implementation MBAAction
+@implementation PBLAction
 
 - (void)enable:(BOOL)enable {
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

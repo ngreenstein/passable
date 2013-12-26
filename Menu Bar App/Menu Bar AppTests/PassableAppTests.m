@@ -1,6 +1,6 @@
 //
 //  Menu_Bar_AppTests.m
-//  Menu Bar AppTests
+// PassableTests
 //
 //  Created by Nathan Greenstein on 11/30/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface Menu_Bar_AppTests : XCTestCase
+@interface PassableAppTests : XCTestCase
 
 @end
 
-@implementation Menu_Bar_AppTests
+@implementation PassableAppTests
 
 - (void)setUp
 {

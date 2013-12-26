@@ -1,26 +1,26 @@
 //
-//  MBAAppDelegate.m
-//  Menu Bar App
+// PBLAppDelegate.m
+// Passable
 //
 //  Created by Nathan Greenstein on 11/30/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBAAppDelegate.h"
+#import "PBLAppDelegate.h"
 
-#import "MBAStatusItemView.h"
-#include "MBAConstants.h"
+#import "PBLStatusItemView.h"
+#include "PBLConstants.h"
 
-#import "MBAHotCornersAction.h"
-#import "MBAScrollingAction.h"
-#import "MBANotificationsAction.h"
+#import "PBLHotCornersAction.h"
+#import "PBLScrollingAction.h"
+#import "PBLNotificationsAction.h"
 
 #import <Quincy/BWQuincyManager.h>
 
-@interface MBAAppDelegate () <NSMenuDelegate, MBAStatusItemViewDelegate, MBAActionDelegate, BWQuincyManagerDelegate>
+@interface PBLAppDelegate () <NSMenuDelegate, PBLStatusItemViewDelegate, PBLActionDelegate, BWQuincyManagerDelegate>
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
-@property (nonatomic, strong) MBAStatusItemView *statusItemView;
+@property (nonatomic, strong) PBLStatusItemView *statusItemView;
 
 @property (weak) IBOutlet NSMenu *menu;
 @property (nonatomic, getter = isShowingMenu) BOOL showingMenu;
@@ -34,13 +34,13 @@
 @property (nonatomic) BOOL controlNotifications;
 
 @property (nonatomic) NSArray *controlledActions;
-@property (nonatomic) MBAHotCornersAction *hotCornersAction;
-@property (nonatomic) MBAScrollingAction *scrollingAction;
-@property (nonatomic) MBANotificationsAction *notificationsAction;
+@property (nonatomic) PBLHotCornersAction *hotCornersAction;
+@property (nonatomic) PBLScrollingAction *scrollingAction;
+@property (nonatomic) PBLNotificationsAction *notificationsAction;
 
 @end
 
-@implementation MBAAppDelegate
+@implementation PBLAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	
@@ -49,7 +49,7 @@
 	NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:22.0];
 	[statusItem setEnabled:YES];
 	self.statusItem = statusItem;
-	MBAStatusItemView *statusItemView = [[MBAStatusItemView alloc] initWithStatusItem:self.statusItem];
+	PBLStatusItemView *statusItemView = [[PBLStatusItemView alloc] initWithStatusItem:self.statusItem];
 	statusItemView.highlighted = NO;
 	statusItemView.delegate = self;
 	self.statusItem.view = statusItemView;
@@ -67,11 +67,11 @@
 	self.controlNotifications = [defaults boolForKey:kControlNotificationsPrefKey];
 	self.notificationCenterMenuItem.state = self.controlNotifications ? NSOnState : NSOffState;
 	
-	self.hotCornersAction = [[MBAHotCornersAction alloc] init];
+	self.hotCornersAction = [[PBLHotCornersAction alloc] init];
 	self.hotCornersAction.delegate = self;
-	self.scrollingAction = [[MBAScrollingAction alloc] init];
+	self.scrollingAction = [[PBLScrollingAction alloc] init];
 	self.scrollingAction.delegate = self;
-	self.notificationsAction = [[MBANotificationsAction alloc] init];
+	self.notificationsAction = [[PBLNotificationsAction alloc] init];
 	self.notificationsAction.delegate = self;
 	
 	if ([defaults boolForKey:kShowIntroWindowPrefKey]) {
@@ -203,7 +203,7 @@
 	if (enabled != _enabled) {
 		_enabled = enabled;
 		
-		[self.controlledActions enumerateObjectsUsingBlock:^(MBAAction *action, NSUInteger index, BOOL *stop) {
+		[self.controlledActions enumerateObjectsUsingBlock:^(PBLAction *action, NSUInteger index, BOOL *stop) {
 			[action enable:!enabled];
 		}];
 		
@@ -227,7 +227,7 @@
 
 #pragma mark - MBAActionDelegate Methods
 
-- (void)action:(MBAAction *)action didEnable:(BOOL)enabled withError:(NSError *)error {
+- (void)action:(PBLAction *)action didEnable:(BOOL)enabled withError:(NSError *)error {
 	if (error) {
 		NSLog(@"Error %li occured when %@ the action '%@'.", (long)error.code, enabled ? @"enabling" : @"disabling", action.description);
 	}

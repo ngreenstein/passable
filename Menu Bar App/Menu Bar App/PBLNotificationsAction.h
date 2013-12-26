@@ -1,13 +1,13 @@
 //
-//  MBANotificationsAction.h
-//  Menu Bar App
+// PBLNotificationsAction.h
+// Passable
 //
 //  Created by Nathan Greenstein on 12/23/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBAAction.h"
+#import "PBLAction.h"
 
-@interface MBANotificationsAction : MBAAction
+@interface PBLNotificationsAction : PBLAction
 
 @end

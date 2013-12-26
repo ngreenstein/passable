@@ -1,14 +1,14 @@
 //
-//  MBAHotCornersAction.m
-//  Menu Bar App
+// PBLHotCornersAction.m
+// Passable
 //
 //  Created by Nathan Greenstein on 12/23/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBAHotCornersAction.h"
+#import "PBLHotCornersAction.h"
 
-#include "MBAConstants.h"
+#include "PBLConstants.h"
 
 // When "disabling" hot corners, this goes through the user's hot corners and, for any that don't already have modifier keys required, requires the command key.
 // Then, when "enabling" them again, it goes through and turns off any required modifiers that it added.
@@ -20,7 +20,7 @@
 // See the wrapper method -setHotCorner:toAction:withModifierMask:
 extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, int modifierKeysMask);
 
-@implementation MBAHotCornersAction
+@implementation PBLHotCornersAction
 
 - (void)enableNow:(BOOL)enable {
 	

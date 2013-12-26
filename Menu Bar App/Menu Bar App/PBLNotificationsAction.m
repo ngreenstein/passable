@@ -1,16 +1,16 @@
 //
-//  MBANotificationsAction.m
-//  Menu Bar App
+// PBLNotificationsAction.m
+// Passable
 //
 //  Created by Nathan Greenstein on 12/23/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBANotificationsAction.h"
+#import "PBLNotificationsAction.h"
 
-#import "MBAConstants.h"
+#import "PBLConstants.h"
 
-@implementation MBANotificationsAction
+@implementation PBLNotificationsAction
 
 // The best hack I've found to do this is to temporarily set the automatic DND schedule (usually used to disable notifications at night)
 // to go from 3:01 AM to 3:00 AM and then restore the user's actual settings after the app is disabled.

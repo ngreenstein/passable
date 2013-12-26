@@ -1,13 +1,13 @@
 //
-//  MBAConstants.h
-//  Menu Bar App
+//  PBLConstants.h
+// Passable
 //
 //  Created by Nathan Greenstein on 12/1/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#ifndef Menu_Bar_App_MBAConstants_h
-#define Menu_Bar_App_MBAConstants_h
+#ifndef PBLConstants_h
+#define PBLConstants_h
 
 #pragma mark - General
 static NSString *const kMenuItemIconBaseName = @"TempIcon";

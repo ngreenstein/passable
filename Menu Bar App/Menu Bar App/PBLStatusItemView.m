@@ -1,23 +1,23 @@
 //
-//  MBAStatusItemView.m
-//  Menu Bar App
+// PBLStatusItemView.m
+// Passable
 //
 //  Created by Nathan Greenstein on 11/30/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBAStatusItemView.h"
+#import "PBLStatusItemView.h"
 
-#import "MBAConstants.h"
+#import "PBLConstants.h"
 
-@interface MBAStatusItemView ()
+@interface PBLStatusItemView ()
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSStatusItem *statusItem;
 
 @end
 
-@implementation MBAStatusItemView
+@implementation PBLStatusItemView
 
 - (instancetype)initWithStatusItem:(NSStatusItem *)statusItem {
 	CGFloat height = [NSStatusBar systemStatusBar].thickness;

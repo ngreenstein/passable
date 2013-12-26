@@ -67,7 +67,7 @@
                 <outlet property="delegate" destination="494" id="mzv-pl-72W"/>
             </connections>
         </menu>
-        <customObject id="494" customClass="MBAAppDelegate">
+        <customObject id="494" customClass="PBLAppDelegate">
             <connections>
                 <outlet property="aboutMenuItem" destination="6Lf-QC-aoS" id="IBT-qB-Fgl"/>
                 <outlet property="donateMenuItem" destination="8Vv-O3-Ltc" id="rCT-4v-aLW"/>

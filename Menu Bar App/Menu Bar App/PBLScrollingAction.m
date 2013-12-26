@@ -1,12 +1,12 @@
 //
-//  MBAScrollingAction.m
-//  Menu Bar App
+// PBLScrollingAction.m
+// Passable
 //
 //  Created by Nathan Greenstein on 12/23/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBAScrollingAction.h"
+#import "PBLScrollingAction.h"
 
 // This one is simple: set a GlobalDomain pref and call a private API to notify apps of the change.
 
@@ -15,7 +15,7 @@ typedef int CGSConnection;
 extern CGSConnection _CGSDefaultConnection(void);
 extern void CGSSetSwipeScrollDirection(const CGSConnection connection, BOOL natural);
 
-@implementation MBAScrollingAction
+@implementation PBLScrollingAction
 
 - (void)enableNow:(BOOL)enable {
 	

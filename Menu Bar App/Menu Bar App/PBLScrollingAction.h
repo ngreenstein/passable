@@ -1,13 +1,13 @@
 //
-//  MBAScrollingAction.h
-//  Menu Bar App
+// PBLScrollingAction.h
+// Passable
 //
 //  Created by Nathan Greenstein on 12/23/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
 //
 
-#import "MBAAction.h"
+#import "PBLAction.h"
 
-@interface MBAScrollingAction : MBAAction
+@interface PBLScrollingAction : PBLAction
 
 @end

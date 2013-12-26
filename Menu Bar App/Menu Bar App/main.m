@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Menu Bar App
+// Passable
 //
 //  Created by Nathan Greenstein on 11/30/13.
 //  Copyright (c) 2013 Nathan Greenstein. All rights reserved.
