@@ -23,5 +23,6 @@
 - (void)enableNow:(BOOL)enable;
 
 @property (nonatomic, weak) id <PBLActionDelegate> delegate;
+@property (nonatomic, getter = isBusy) BOOL busy;
 
 @end

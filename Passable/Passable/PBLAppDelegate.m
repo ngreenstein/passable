@@ -92,8 +92,20 @@
 	// Required by Quincy. We don't do anything here.
 }
 
+// Don't let the app quit if there are async actions going on; otherwise some temporary settings could be left un-reverted.
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
+	NSApplicationTerminateReply __block reply = NSTerminateNow;
+	[self.controlledActions enumerateObjectsUsingBlock:^(PBLAction *action, NSUInteger index, BOOL *stop) {
+		if (action.isBusy) {
+			reply = NSTerminateCancel;
+			*stop = YES;
+		}
+	}];
+	return reply;
+}
+
 - (void)applicationWillTerminate:(NSNotification *)notification {
-	self.enabled = NO;
+	[self setEnabled:NO asynchronously:NO];
 }
 
 #pragma mark - MBAStatusItemViewDelegate Methods
@@ -195,16 +207,24 @@
 
 #pragma mark - Turning On and Off
 
-- (void)setEnabled:(BOOL)enabled {
+- (void)setEnabled:(BOOL)enabled asynchronously:(BOOL)async {
 	if (enabled != _enabled) {
 		_enabled = enabled;
 		
 		[self.controlledActions enumerateObjectsUsingBlock:^(PBLAction *action, NSUInteger index, BOOL *stop) {
-			[action enable:!enabled];
+			if (async) {
+				[action enable:!enabled];
+			} else {
+				[action enableNow:!enabled];
+			}
 		}];
 		
 		self.statusItemView.active = enabled;
 	}
+}
+
+- (void)setEnabled:(BOOL)enabled {
+	[self setEnabled:enabled asynchronously:YES];
 }
 
 - (NSArray *)controlledActions {
