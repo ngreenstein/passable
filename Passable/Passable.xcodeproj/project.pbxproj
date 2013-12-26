@@ -191,8 +191,7 @@
 				CD6D9769184A9DB50078A9AB /* Images.xcassets */,
 				CD6D9758184A9DB50078A9AB /* Supporting Files */,
 			);
-			name = Passable;
-			path = "Menu Bar App";
+			path = Passable;
 			sourceTree = "<group>";
 		};
 		CD6D9758184A9DB50078A9AB /* Supporting Files */ = {
@@ -215,7 +214,7 @@
 				CD6D9776184A9DB50078A9AB /* Supporting Files */,
 			);
 			name = "Passable Tests";
-			path = "Menu Bar AppTests";
+			path = PassableTestts;
 			sourceTree = "<group>";
 		};
 		CD6D9776184A9DB50078A9AB /* Supporting Files */ = {
@@ -490,11 +489,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ngreenst/Dropbox/desktop/Projects/Normalizer\\ Menu\\ Bar\\ App/Menu\\ Bar\\ App",
+					/Users/ngreenst/Dropbox/desktop/Projects/Passable/Passable,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Menu Bar App/Passable-Prefix.pch";
-				INFOPLIST_FILE = "Menu Bar App/Passable-Info.plist";
+				GCC_PREFIX_HEADER = "Passable/Passable-Prefix.pch";
+				INFOPLIST_FILE = "Passable/Passable-Info.plist";
 				PRODUCT_NAME = Passable;
 				WRAPPER_EXTENSION = app;
 			};
@@ -507,11 +506,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ngreenst/Dropbox/desktop/Projects/Normalizer\\ Menu\\ Bar\\ App/Menu\\ Bar\\ App",
+					/Users/ngreenst/Dropbox/desktop/Projects/Passable/Passable,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Menu Bar App/Passable-Prefix.pch";
-				INFOPLIST_FILE = "Menu Bar App/Passable-Info.plist";
+				GCC_PREFIX_HEADER = "Passable/Passable-Prefix.pch";
+				INFOPLIST_FILE = "Passable/Passable-Info.plist";
 				PRODUCT_NAME = Passable;
 				WRAPPER_EXTENSION = app;
 			};
