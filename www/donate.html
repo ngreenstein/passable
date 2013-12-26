@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Donate to Passable</title>
+	</head>
+	
+	<body>
+	
+		<h1>Donate to Passable</h1>
+		
+		<p>Thank you for donating. This will support Passable's continued development.</p>
+		
+		<button id="tenDollars">Make it $10!</button>
+		
+		<button id="donateButton">Donate</button>
+		
+		<script src="https://checkout.stripe.com/checkout.js"></script>
+		
+		<script>
+		
+			donationAmount = 5;
+
+			var handler = StripeCheckout.configure({
+				key: 'pk_test_HUQ7vOtPSg0dK32CsQaT8Dqu',
+				image: '/square-image.png',
+				token: function(token, args) {
+					// Use the token to create the charge with a server-side script.
+				}
+			});
+			
+			document.getElementById('donateButton').addEventListener('click', function(e) {
+				// Open Checkout with further options
+				handler.open({
+					name: 'Donate to Passable',
+					description: 'Donate $' + donationAmount,
+					amount: donationAmount * 100
+				});
+				e.preventDefault();
+			});
+			
+			document.getElementById("tenDollars").addEventListener('click', function(event) {
+				donationAmount = 10;
+			});
+		
+		</script>
+		
+	</body>
+	
+</html>
