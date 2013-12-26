@@ -142,7 +142,7 @@
 }
 
 - (IBAction)donateClicked:(NSMenuItem *)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://apple.com"]];
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.ngreenstein.com/passable/donate.html"]];
 }
 - (IBAction)aboutClicked:(id)sender {
 	[NSApp orderFrontStandardAboutPanel:self];

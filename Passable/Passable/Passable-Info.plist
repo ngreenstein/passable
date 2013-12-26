@@ -35,6 +35,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://www.ngreenstein.com/passableappcast.xml</string>
+	<string>http://www.ngreenstein.com/passableupdate/appcast.xml</string>
 </dict>
 </plist>
