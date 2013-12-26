@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>0.1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
@@ -35,6 +35,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://ngreenstein.com/passable/appcast.xml</string>
+	<string>http://www.ngreenstein.com/passableappcast.xml</string>
 </dict>
 </plist>

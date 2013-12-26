@@ -13,8 +13,6 @@
 		CD0EE4701868B26900409D00 /* PBLScrollingAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE46F1868B26900409D00 /* PBLScrollingAction.m */; };
 		CD0EE4731868B39400409D00 /* PBLNotificationsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE4721868B39400409D00 /* PBLNotificationsAction.m */; };
 		CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD13B084186A4E9100AF0EDA /* Localizable.strings */; };
-		CD13B095186B579D00AF0EDA /* Quincy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD13B094186B579D00AF0EDA /* Quincy.framework */; };
-		CD13B097186B58A600AF0EDA /* Quincy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD13B094186B579D00AF0EDA /* Quincy.framework */; };
 		CD275896186B6C4F00619CC0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD275895186B6C4F00619CC0 /* Sparkle.framework */; };
 		CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6D9751184A9DB50078A9AB /* Cocoa.framework */; };
 		CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD6D975A184A9DB50078A9AB /* InfoPlist.strings */; };
@@ -29,6 +27,9 @@
 		CD6D977C184A9DB50078A9AB /* PassableAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D977B184A9DB50078A9AB /* PassableAppTests.m */; };
 		CD6D9787184AA39E0078A9AB /* PBLStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D9786184AA39E0078A9AB /* PBLStatusItemView.m */; };
 		CD8CC8EF184BBC97005BDEF6 /* DefaultPreferenceValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */; };
+		CDA6087C186C97EC00E0AE3D /* BWQuincyMain.nib in Resources */ = {isa = PBXBuildFile; fileRef = CDA60877186C97EC00E0AE3D /* BWQuincyMain.nib */; };
+		CDA6087D186C97EC00E0AE3D /* BWQuincyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		CDA6087E186C97EC00E0AE3D /* BWQuincyUI.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6087B186C97EC00E0AE3D /* BWQuincyUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD13B097186B58A600AF0EDA /* Quincy.framework in CopyFiles */,
 				CD068C67186B6C700043A598 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,7 +72,6 @@
 		CD13B086186A4E9800AF0EDA /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD13B087186A4E9E00AF0EDA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD13B08C186A541D00AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CD13B094186B579D00AF0EDA /* Quincy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quincy.framework; sourceTree = "<group>"; };
 		CD275895186B6C4F00619CC0 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CD6D974E184A9DB50078A9AB /* Passable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6D9751184A9DB50078A9AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -96,6 +95,11 @@
 		CD6D9786184AA39E0078A9AB /* PBLStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PBLStatusItemView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferenceValues.plist; sourceTree = "<group>"; };
 		CD8CC8F4184BC3C4005BDEF6 /* PBLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PBLConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CDA60877186C97EC00E0AE3D /* BWQuincyMain.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWQuincyMain.nib; sourceTree = "<group>"; };
+		CDA60878186C97EC00E0AE3D /* BWQuincyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWQuincyManager.h; sourceTree = "<group>"; };
+		CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWQuincyManager.m; sourceTree = "<group>"; };
+		CDA6087A186C97EC00E0AE3D /* BWQuincyUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWQuincyUI.h; sourceTree = "<group>"; };
+		CDA6087B186C97EC00E0AE3D /* BWQuincyUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWQuincyUI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,6 @@
 			files = (
 				CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */,
 				CD275896186B6C4F00619CC0 /* Sparkle.framework in Frameworks */,
-				CD13B095186B579D00AF0EDA /* Quincy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +161,8 @@
 		CD6D9750184A9DB50078A9AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDA60876186C97EC00E0AE3D /* QuincyKit */,
 				CD275895186B6C4F00619CC0 /* Sparkle.framework */,
-				CD13B094186B579D00AF0EDA /* Quincy.framework */,
 				CD6D9751184A9DB50078A9AB /* Cocoa.framework */,
 				CD6D9770184A9DB50078A9AB /* XCTest.framework */,
 				CD6D9753184A9DB50078A9AB /* Other Frameworks */,
@@ -226,6 +229,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CDA60876186C97EC00E0AE3D /* QuincyKit */ = {
+			isa = PBXGroup;
+			children = (
+				CDA60877186C97EC00E0AE3D /* BWQuincyMain.nib */,
+				CDA60878186C97EC00E0AE3D /* BWQuincyManager.h */,
+				CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */,
+				CDA6087A186C97EC00E0AE3D /* BWQuincyUI.h */,
+				CDA6087B186C97EC00E0AE3D /* BWQuincyUI.m */,
+			);
+			path = QuincyKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,11 +286,12 @@
 		CD6D9746184A9DB50078A9AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PAB;
+				CLASSPREFIX = PBL;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Nathan Greenstein";
 				TargetAttributes = {
 					CD6D974D184A9DB50078A9AB = {
+						DevelopmentTeam = AZAN3L8ZF3;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -314,6 +330,7 @@
 			files = (
 				CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */,
 				CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */,
+				CDA6087C186C97EC00E0AE3D /* BWQuincyMain.nib in Resources */,
 				CD6D976A184A9DB50078A9AB /* Images.xcassets in Resources */,
 				CD8CC8EF184BBC97005BDEF6 /* DefaultPreferenceValues.plist in Resources */,
 				CD6D9762184A9DB50078A9AB /* Credits.rtf in Resources */,
@@ -337,8 +354,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6D975E184A9DB50078A9AB /* main.m in Sources */,
+				CDA6087D186C97EC00E0AE3D /* BWQuincyManager.m in Sources */,
 				CD0EE46A1868ACA200409D00 /* PBLHotCornersAction.m in Sources */,
 				CD6D9765184A9DB50078A9AB /* PBLAppDelegate.m in Sources */,
+				CDA6087E186C97EC00E0AE3D /* BWQuincyUI.m in Sources */,
 				CD0EE46D1868AFE400409D00 /* PBLAction.m in Sources */,
 				CD0EE4701868B26900409D00 /* PBLScrollingAction.m in Sources */,
 				CD6D9787184AA39E0078A9AB /* PBLStatusItemView.m in Sources */,
@@ -486,6 +505,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,6 +516,7 @@
 				GCC_PREFIX_HEADER = "Passable/Passable-Prefix.pch";
 				INFOPLIST_FILE = "Passable/Passable-Info.plist";
 				PRODUCT_NAME = Passable;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -503,6 +525,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,6 +536,7 @@
 				GCC_PREFIX_HEADER = "Passable/Passable-Prefix.pch";
 				INFOPLIST_FILE = "Passable/Passable-Info.plist";
 				PRODUCT_NAME = Passable;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

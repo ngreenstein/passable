@@ -15,7 +15,7 @@
 #import "PBLScrollingAction.h"
 #import "PBLNotificationsAction.h"
 
-#import <Quincy/BWQuincyManager.h>
+#import "BWQuincyManager.h"
 
 @interface PBLAppDelegate () <NSMenuDelegate, PBLStatusItemViewDelegate, PBLActionDelegate, BWQuincyManagerDelegate>
 
