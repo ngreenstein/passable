@@ -75,7 +75,7 @@
 	self.notificationsAction.delegate = self;
 	
 	if ([defaults boolForKey:kShowIntroWindowPrefKey]) {
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Welcome to AppName!", nil) defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:NSLocalizedString(@"Click the AppName icon in the menu bar to turn it on and off. Control + click it or right-click it for more options.", nil)];
+		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Welcome to Passable!", nil) defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:NSLocalizedString(@"Click the Passable icon in the menu bar to turn it on and off. Control + click it or right-click it for more options.", nil)];
 		[alert runModal];
 		[defaults setBool:NO forKey:kShowIntroWindowPrefKey];
 		[defaults synchronize];
@@ -88,12 +88,8 @@
 	
 }
 
-- (void) showMainApplicationWindow
-{
-    // launch the main app window
-    // remember not to automatically show the main window if using NIBs
-//    [window makeFirstResponder: nil];
-//    [window makeKeyAndOrderFront:nil];
+- (void) showMainApplicationWindow {
+	// Required by Quincy. We don't do anything here.
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {

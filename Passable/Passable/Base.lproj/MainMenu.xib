@@ -41,7 +41,7 @@
                         <action selector="donateClicked:" target="494" id="2Zn-fR-S1I"/>
                     </connections>
                 </menuItem>
-                <menuItem title="About AppName" id="6Lf-QC-aoS">
+                <menuItem title="About Passable" id="6Lf-QC-aoS">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="aboutClicked:" target="494" id="jSl-AD-I5G"/>
@@ -57,7 +57,7 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="8LQ-2e-m1e"/>
-                <menuItem title="Quit AppName" keyEquivalent="q" id="5FK-qn-6Ml">
+                <menuItem title="Quit Passable" keyEquivalent="q" id="5FK-qn-6Ml">
                     <connections>
                         <action selector="quitClicked:" target="494" id="xvW-je-36n"/>
                     </connections>

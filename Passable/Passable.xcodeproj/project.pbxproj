@@ -20,7 +20,7 @@
 		CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD6D975A184A9DB50078A9AB /* InfoPlist.strings */; };
 		CD6D975E184A9DB50078A9AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D975D184A9DB50078A9AB /* main.m */; };
 		CD6D9762184A9DB50078A9AB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CD6D9760184A9DB50078A9AB /* Credits.rtf */; };
-		CD6D9765184A9DB50078A9AB /* PBLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D9764184A9DB50078A9AB /* PBLAppDelegate.m */; };
+		CD6D9765184A9DB50078A9AB /* PBLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D9764184A9DB50078A9AB /* PBLAppDelegate.m */; };
 		CD6D9768184A9DB50078A9AB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6D9766184A9DB50078A9AB /* MainMenu.xib */; };
 		CD6D976A184A9DB50078A9AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6D9769184A9DB50078A9AB /* Images.xcassets */; };
 		CD6D9771184A9DB50078A9AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6D9770184A9DB50078A9AB /* XCTest.framework */; };
@@ -84,7 +84,7 @@
 		CD6D975F184A9DB50078A9AB /* Passable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Passable-Prefix.pch"; sourceTree = "<group>"; };
 		CD6D9761184A9DB50078A9AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		CD6D9763184A9DB50078A9AB /* PBLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PBLAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CD6D9764184A9DB50078A9AB /* PBLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "P\U0010BLAppDelegate.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CD6D9764184A9DB50078A9AB /* PBLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PBLAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CD6D9767184A9DB50078A9AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CD6D9769184A9DB50078A9AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD6D976F184A9DB50078A9AB /* PassableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +182,7 @@
 			children = (
 				CD8CC8F4184BC3C4005BDEF6 /* PBLConstants.h */,
 				CD6D9763184A9DB50078A9AB /* PBLAppDelegate.h */,
-				CD6D9764184A9DB50078A9AB /* PBLAppDelegate.m */,
+				CD6D9764184A9DB50078A9AB /* PBLAppDelegate.m */,
 				CD0EE4671868AC8600409D00 /* Actions */,
 				CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */,
 				CD6D9785184AA39E0078A9AB /* PBLStatusItemView.h */,
@@ -338,7 +338,7 @@
 			files = (
 				CD6D975E184A9DB50078A9AB /* main.m in Sources */,
 				CD0EE46A1868ACA200409D00 /* PBLHotCornersAction.m in Sources */,
-				CD6D9765184A9DB50078A9AB /* PBLAppDelegate.m in Sources */,
+				CD6D9765184A9DB50078A9AB /* PBLAppDelegate.m in Sources */,
 				CD0EE46D1868AFE400409D00 /* PBLAction.m in Sources */,
 				CD0EE4701868B26900409D00 /* PBLScrollingAction.m in Sources */,
 				CD6D9787184AA39E0078A9AB /* PBLStatusItemView.m in Sources */,
