@@ -14,6 +14,7 @@
 		CD0EE4731868B39400409D00 /* PBLNotificationsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE4721868B39400409D00 /* PBLNotificationsAction.m */; };
 		CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD13B084186A4E9100AF0EDA /* Localizable.strings */; };
 		CD275896186B6C4F00619CC0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD275895186B6C4F00619CC0 /* Sparkle.framework */; };
+		CD2CA4301874B23700C554AC /* BWQuincyMain.nib in Resources */ = {isa = PBXBuildFile; fileRef = CD2CA4321874B23700C554AC /* BWQuincyMain.nib */; };
 		CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6D9751184A9DB50078A9AB /* Cocoa.framework */; };
 		CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD6D975A184A9DB50078A9AB /* InfoPlist.strings */; };
 		CD6D975E184A9DB50078A9AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D975D184A9DB50078A9AB /* main.m */; };
@@ -27,7 +28,6 @@
 		CD6D977C184A9DB50078A9AB /* PassableAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D977B184A9DB50078A9AB /* PassableAppTests.m */; };
 		CD6D9787184AA39E0078A9AB /* PBLStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D9786184AA39E0078A9AB /* PBLStatusItemView.m */; };
 		CD8CC8EF184BBC97005BDEF6 /* DefaultPreferenceValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */; };
-		CDA6087C186C97EC00E0AE3D /* BWQuincyMain.nib in Resources */ = {isa = PBXBuildFile; fileRef = CDA60877186C97EC00E0AE3D /* BWQuincyMain.nib */; };
 		CDA6087D186C97EC00E0AE3D /* BWQuincyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		CDA6087E186C97EC00E0AE3D /* BWQuincyUI.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6087B186C97EC00E0AE3D /* BWQuincyUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 /* End PBXBuildFile section */
@@ -73,6 +73,9 @@
 		CD13B087186A4E9E00AF0EDA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD13B08C186A541D00AF0EDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD275895186B6C4F00619CC0 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		CD5D22631874D731000B28AF /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/BWQuincyMain.nib; sourceTree = "<group>"; };
+		CD5D22641874D734000B28AF /* es */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = es; path = es.lproj/BWQuincyMain.nib; sourceTree = "<group>"; };
+		CD6C5A6D1874D60D00D81199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/BWQuincyMain.nib; sourceTree = "<group>"; };
 		CD6D974E184A9DB50078A9AB /* Passable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6D9751184A9DB50078A9AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CD6D9754184A9DB50078A9AB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -95,7 +98,6 @@
 		CD6D9786184AA39E0078A9AB /* PBLStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PBLStatusItemView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferenceValues.plist; sourceTree = "<group>"; };
 		CD8CC8F4184BC3C4005BDEF6 /* PBLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PBLConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CDA60877186C97EC00E0AE3D /* BWQuincyMain.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = BWQuincyMain.nib; sourceTree = "<group>"; };
 		CDA60878186C97EC00E0AE3D /* BWQuincyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWQuincyManager.h; sourceTree = "<group>"; };
 		CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWQuincyManager.m; sourceTree = "<group>"; };
 		CDA6087A186C97EC00E0AE3D /* BWQuincyUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWQuincyUI.h; sourceTree = "<group>"; };
@@ -232,7 +234,7 @@
 		CDA60876186C97EC00E0AE3D /* QuincyKit */ = {
 			isa = PBXGroup;
 			children = (
-				CDA60877186C97EC00E0AE3D /* BWQuincyMain.nib */,
+				CD2CA4321874B23700C554AC /* BWQuincyMain.nib */,
 				CDA60878186C97EC00E0AE3D /* BWQuincyManager.h */,
 				CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */,
 				CDA6087A186C97EC00E0AE3D /* BWQuincyUI.h */,
@@ -330,7 +332,7 @@
 			files = (
 				CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */,
 				CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */,
-				CDA6087C186C97EC00E0AE3D /* BWQuincyMain.nib in Resources */,
+				CD2CA4301874B23700C554AC /* BWQuincyMain.nib in Resources */,
 				CD6D976A184A9DB50078A9AB /* Images.xcassets in Resources */,
 				CD8CC8EF184BBC97005BDEF6 /* DefaultPreferenceValues.plist in Resources */,
 				CD6D9762184A9DB50078A9AB /* Credits.rtf in Resources */,
@@ -391,6 +393,16 @@
 				CD13B087186A4E9E00AF0EDA /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CD2CA4321874B23700C554AC /* BWQuincyMain.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD6C5A6D1874D60D00D81199 /* Base */,
+				CD5D22631874D731000B28AF /* en */,
+				CD5D22641874D734000B28AF /* es */,
+			);
+			name = BWQuincyMain.nib;
 			sourceTree = "<group>";
 		};
 		CD6D975A184A9DB50078A9AB /* InfoPlist.strings */ = {

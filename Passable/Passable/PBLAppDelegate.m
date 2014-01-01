@@ -17,6 +17,8 @@
 
 #import "BWQuincyManager.h"
 
+#import "BWQuincyUI.h"
+
 @interface PBLAppDelegate () <NSMenuDelegate, PBLStatusItemViewDelegate, PBLActionDelegate, BWQuincyManagerDelegate>
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
@@ -84,8 +86,10 @@
 	
 	// Crash reporting.
 	[[BWQuincyManager sharedQuincyManager] setSubmissionURL:@"http://www.ngreenstein.com/quincy/crash_v200.php"];
-	[[BWQuincyManager sharedQuincyManager] setCompanyName:@"Nathan Greenstein"];
+	[[BWQuincyManager sharedQuincyManager] setCompanyName:NSLocalizedString(@"the Passable developers", nil)];
 	[[BWQuincyManager sharedQuincyManager] setDelegate:self];
+//	BWQuincyUI *quincyWindow = [[BWQuincyUI alloc] initWithManager:[BWQuincyManager sharedQuincyManager] crashFile:nil companyName:[[BWQuincyManager sharedQuincyManager] companyName] applicationName:@"Passable"];
+//	[quincyWindow askCrashReportDetails];
 	
 }
 
@@ -116,6 +120,7 @@
 }
 
 - (void)rightClicked:(id)sender {
+	kill( getpid(), SIGABRT );
 	[self showMenu:!self.isShowingMenu];
 }
 

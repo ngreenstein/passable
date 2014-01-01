@@ -1,4 +1,7 @@
 ﻿/* No comment provided by engineer. */
+"the Passable developers" = "los desarrolladores de Passable";
+
+/* No comment provided by engineer. */
 "Welcome to Passable!" = "¡Bienvenido a Passable!";
 
 /* No comment provided by engineer. */
@@ -60,4 +63,15 @@
 
 /* No comment provided by engineer. */
 "Unable to sync NSUserDefaults to store old start/end times." = "Unable to sync NSUserDefaults to store old start/end times.";
+
+/* ========== Crash Reporting ========= */
+
+/* Note text */
+"No personal information will be sent with this report." = "No se enviará ninguna información personal con este informe.";
+
+/* User description placeholder */
+"Please describe any steps needed to trigger the problem" = "Por favor describa los pasos necesarios para desencadenar el problema";
+
+/* Window title */
+"Problem Report for %@" = "Informe de problema para %@";
 
