@@ -10,7 +10,11 @@
 #define PBLConstants_h
 
 #pragma mark - General
-static NSString *const kMenuItemIconBaseName = @"TempIcon";
+static NSString *const kMenuItemIconBaseName = @"MenuIcon";
+static NSString *const kMenuItemIconEnabledSuffix = @"Enabled";
+static NSString *const kMenuItemIconDisabledSuffix = @"Disabled";
+static NSString *const kMenuItemIconHighlightedSuffix = @"Highlighted";
+
 
 #pragma mark - MBA Preferences
 static NSString *const kDefaultPreferencesFileName = @"DefaultPreferenceValues";

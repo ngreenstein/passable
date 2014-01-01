@@ -59,7 +59,14 @@
 }
 
 - (NSImage *)iconForCurrentStatus {
-	NSString *imageName = [NSString stringWithFormat:@"%@%@%@", kMenuItemIconBaseName, self.isActive ? @"Active" : @"", self.isHighlighted ? @"Highlighted" : @""];
+	NSString *baseName = kMenuItemIconBaseName;
+	NSString *suffix = kMenuItemIconDisabledSuffix;
+	if (self.isHighlighted) {
+		suffix = kMenuItemIconHighlightedSuffix;
+	} else if (self.isActive) {
+		suffix = kMenuItemIconEnabledSuffix;
+	}
+	NSString *imageName = [NSString stringWithFormat:@"%@%@", baseName, suffix];
 	return [NSImage imageNamed:imageName];
 }
 
