@@ -120,7 +120,7 @@
 }
 
 - (void)rightClicked:(id)sender {
-	kill( getpid(), SIGABRT );
+//	kill( getpid(), SIGABRT );
 	[self showMenu:!self.isShowingMenu];
 }
 
