@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <channel>
+      <title>Menu Bar App Updates</title>
+      <link>http://ngreenstein.com/menubarapp/appcast.xml</link>
+      <description>Most recent changes with links to updates.</description>
+      <language>en</language>
+         <item>
+            <title>Version 0.2: Now with an identity!</title>
+			<description xml:lang="en"><![CDATA[
+				<h2>New in this Version</h2>
+				<ul>
+					<li>A  name!</li>
+					<li>An icon!</li>
+				</ul>
+			]]></description>
+			<description xml:lang="es"><![CDATA[
+				<h2>Español: New in this Version</h2>
+				<ul>
+					<li>A  name!</li>
+					<li>An icon!</li>
+				</ul>
+			]]></description>
+            <pubDate>Sun, 5 Jan 2013 17:21:00 -0800</pubDate>
+            <enclosure url="http://passableapp.com/downloads/Passable01.app.zip" sparkle:version="0.1" length="1621206" type="application/octet-stream" />
+         </item>
+
+	</channel>
+</rss>
