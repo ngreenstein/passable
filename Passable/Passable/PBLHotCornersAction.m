@@ -29,7 +29,7 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 	
 	NSNumber *noActionId = [NSNumber numberWithUnsignedInteger:kDockNoActionIdentifier];
 	NSNumber *commandKeyId = [NSNumber numberWithUnsignedInteger:kDockCommandKeyIdentifier];
-	NSNumber *noKeyId = [NSNumber numberWithUnsignedInteger:kDockNoModifierKeyIdnetifier];
+	NSNumber *noModifierId = [NSNumber numberWithUnsignedInteger:kDockNoModifierKeyIdnetifier];
 	
 	NSError *error;
 	
@@ -44,7 +44,7 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 			error = [NSError errorWithDomain:kErrorDomain code:kErrorStoredValueNotFound userInfo:errorInfo];
 			
 			// If we somehow lose the stored modifiers, make the assumption that the user didn't have any modifiers setup before and remove any command-key modifiers. Note that any modifiers other than command-key ones will, as normal, not be removed.
-			storedModifiers = @[noKeyId, noKeyId, noKeyId, noKeyId];
+			storedModifiers = @[noModifierId, noModifierId, noModifierId, noModifierId];
 		}
 		
 		[defaults removeObjectForKey:kStoredHotCornerModifiersPrefKey];
@@ -81,22 +81,27 @@ extern void CoreDockSetExposeCornerActionWithModifier(int action, int corner, in
 		
 	} else { // Disable
 		
-		NSArray *currentActions = @[currentPrefs[kDockTopLeftActionPrefKey],
-									currentPrefs[kDockTopRightActionPrefKey],
-									currentPrefs[kDockBottomLeftActionPrefKey],
-									currentPrefs[kDockBottomRightActionPrefKey]];
+		// If there are some corners where the user has never enabled hot corners, the pref keys for those corners may not exist.
+		id topLeftAction = currentPrefs[kDockTopLeftActionPrefKey] ? currentPrefs[kDockTopLeftActionPrefKey] : noActionId;
+		id topRightAction = currentPrefs[kDockTopRightActionPrefKey] ? currentPrefs[kDockTopRightActionPrefKey] : noActionId;
+		id bottomLeftAction = currentPrefs[kDockBottomLeftActionPrefKey] ? currentPrefs[kDockBottomLeftActionPrefKey] : noActionId;
+		id bottomRightAction = currentPrefs[kDockBottomRightActionPrefKey] ? currentPrefs[kDockBottomRightActionPrefKey] : noActionId;
 		
-		NSArray *currentModifiers = @[currentPrefs[kDockTopLeftModifierPrefKey],
-									  currentPrefs[kDockTopRightModifierPrefKey],
-									  currentPrefs[kDockBottomLeftModifierPrefKey],
-									  currentPrefs[kDockBottomRightModifierPrefKey]];
+		id topLeftModifier = currentPrefs[kDockTopLeftModifierPrefKey] ? currentPrefs[kDockTopLeftModifierPrefKey] : noModifierId;
+		id topRightModifier = currentPrefs[kDockTopRightModifierPrefKey] ? currentPrefs[kDockTopRightModifierPrefKey] : noModifierId;
+		id bottomLeftModifier = currentPrefs[kDockBottomLeftModifierPrefKey] ? currentPrefs[kDockBottomLeftModifierPrefKey] : noModifierId;
+		id bottomRightModifier = currentPrefs[kDockBottomRightModifierPrefKey] ? currentPrefs[kDockBottomRightModifierPrefKey] : noModifierId;
+		
+		NSArray *currentActions = @[topLeftAction, topRightAction, bottomLeftAction, bottomRightAction];
+		
+		NSArray *currentModifiers = @[topLeftModifier, topRightModifier, bottomLeftModifier, bottomRightModifier];
 		
 		[defaults setObject:currentModifiers forKey:kStoredHotCornerModifiersPrefKey];
 		
 		if ([defaults synchronize]) { // Only change the modfiers if we can save the old ones successfully.
 			for (MBAScreenCorner screenCorner = kTopLeftScreenCorner; screenCorner <= kBottomRightScreenCorner; screenCorner ++) {
 				// Only add the command key modifier if the corner has some action assigned to it and doesn't already have a modifier key.
-				if (![currentActions[screenCorner] isEqualToNumber:noActionId] && [currentModifiers[screenCorner] isEqualToNumber:noKeyId]) {
+				if (![currentActions[screenCorner] isEqualToNumber:noActionId] && [currentModifiers[screenCorner] isEqualToNumber:noModifierId]) {
 					[self setHotCorner:screenCorner toAction:currentActions[screenCorner] withModifierMask:commandKeyId];
 				}
 			}
