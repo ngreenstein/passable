@@ -101,6 +101,10 @@
 //	BWQuincyUI *quincyWindow = [[BWQuincyUI alloc] initWithManager:[BWQuincyManager sharedQuincyManager] crashFile:nil companyName:[[BWQuincyManager sharedQuincyManager] companyName] applicationName:@"Passable"];
 //	[quincyWindow askCrashReportDetails];
 	
+	if (self.activateOnOpen) {
+		self.enabled = YES;
+	}
+	
 }
 
 - (void) showMainApplicationWindow {
