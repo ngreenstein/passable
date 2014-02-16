@@ -1,12 +1,21 @@
 
-/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "5FK-qn-6Ml"; */
+/* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "139-3b-A4k"; */
+"139-3b-A4k.title" = "Check for Updates...";
+
+/* Class = "NSMenuItem"; title = "Open at Login"; ObjectID = "4Qq-8d-m7n"; */
+"4Qq-8d-m7n.title" = "Open at Login";
+
+/* Class = "NSMenuItem"; title = "Quit Passable"; ObjectID = "5FK-qn-6Ml"; */
 "5FK-qn-6Ml.title" = "Quit Passable";
 
-/* Class = "NSMenuItem"; title = "About AppName"; ObjectID = "6Lf-QC-aoS"; */
+/* Class = "NSMenuItem"; title = "About Passable"; ObjectID = "6Lf-QC-aoS"; */
 "6Lf-QC-aoS.title" = "About Passable";
 
 /* Class = "NSMenuItem"; title = "Donate"; ObjectID = "8Vv-O3-Ltc"; */
 "8Vv-O3-Ltc.title" = "Donate";
+
+/* Class = "NSMenuItem"; title = "Activate When Opened"; ObjectID = "8gh-Pv-3bz"; */
+"8gh-Pv-3bz.title" = "Activate When Opened";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "HAX-dy-F6T"; */
 "HAX-dy-F6T.title" = "Help";

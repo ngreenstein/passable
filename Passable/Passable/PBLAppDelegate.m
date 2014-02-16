@@ -29,6 +29,8 @@
 @property (weak) IBOutlet NSMenuItem *hotCornersMenuItem;
 @property (weak) IBOutlet NSMenuItem *scrollingMenuItem;
 @property (weak) IBOutlet NSMenuItem *notificationCenterMenuItem;
+@property (weak) IBOutlet NSMenuItem *openAtLoginMenu;
+@property (weak) IBOutlet NSMenuItem *activateWhenOpenedMenu;
 
 
 @property (nonatomic) BOOL controlHotCorners;
@@ -146,6 +148,12 @@
 }
 - (IBAction)notificationCenterClicked:(NSMenuItem *)sender {
 	self.controlNotifications = (sender.state != NSOnState);
+}
+
+- (IBAction)openAtLoginClicked:(id)sender {
+}
+
+- (IBAction)activateWhenOpenedClicked:(id)sender {
 }
 
 - (IBAction)donateClicked:(NSMenuItem *)sender {

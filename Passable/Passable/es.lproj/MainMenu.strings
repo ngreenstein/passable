@@ -25,3 +25,9 @@
 
 /* Class = "NSMenuItem"; title = "Hot Corners"; ObjectID = "yyX-CL-q4X"; */
 "yyX-CL-q4X.title" = "Esquinas activas";
+
+/* Class = "NSMenuItem"; title = "Open at Login"; ObjectID = "4Qq-8d-m7n"; */
+"4Qq-8d-m7n.title" = "Abrir al inicio de sessión";
+
+/* Class = "NSMenuItem"; title = "Activate When Opened"; ObjectID = "8gh-Pv-3bz"; */
+"8gh-Pv-3bz.title" = "Encender al inicio";
