@@ -34,6 +34,18 @@
 		 	<pubDate>Sun, 16 Jan 2014 10:55:00 -0800</pubDate>
 		 	<enclosure url="http://passableapp.com/downloads/Passable02.app.zip" sparkle:version="0.2" length="1628896" type="application/octet-stream" />
 		 </item>
+		 
+		 <item>
+		  	<title>Version 0.2.1: Crash Fix</title>
+		  	<description xml:lang="en"><![CDATA[
+		  		<p>Fixes a crash that occurred for some users when disabling hot corners.</p>
+		  	]]></description>
+		  	<description xml:lang="es"><![CDATA[
+		  		<p>Arregla un error que producía para algunos usuarios cuando desactivando esquinas activas.</p>
+		  	]]></description>
+		  	<pubDate>Sun, 16 Jan 2014 12:03:00 -0800</pubDate>
+		  	<enclosure url="http://passableapp.com/downloads/Passable021.app.zip" sparkle:version="0.2.1" length="1511082" type="application/octet-stream" />
+		  </item>
 
 	</channel>
 </rss>
