@@ -1,0 +1,24 @@
+
+<opml version="1.0">
+    <head>
+        <expansionState>0,4,8</expansionState>
+    </head>
+    <body>
+        <outline text="What it is">
+            <outline text="What problem it solves"></outline>
+            <outline text="How it solves that problem"></outline>
+            <outline text="Download button"></outline>
+        </outline>
+        <outline text="How to use it">
+            <outline text="Enabling/disabling"></outline>
+            <outline text="Customizing"></outline>
+        </outline>
+        <outline text="Download button"></outline>
+        <outline text="Links to more">
+            <outline text="FAQs"></outline>
+            <outline text="Help"></outline>
+            <outline text="Code on GitHub"></outline>
+        </outline>
+        <outline text="Download button"></outline>
+    </body>
+</opml>
