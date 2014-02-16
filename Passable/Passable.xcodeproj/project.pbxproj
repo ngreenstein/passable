@@ -14,7 +14,6 @@
 		CD0EE4731868B39400409D00 /* PBLNotificationsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0EE4721868B39400409D00 /* PBLNotificationsAction.m */; };
 		CD10787A18B07AFA009E11E7 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10787918B07AFA009E11E7 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CD10787D18B07C06009E11E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD10787C18B07C05009E11E7 /* Security.framework */; };
-		CD10788018B07D5B009E11E7 /* MoveApplication.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD10788218B07D5B009E11E7 /* MoveApplication.strings */; };
 		CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD13B084186A4E9100AF0EDA /* Localizable.strings */; };
 		CD275896186B6C4F00619CC0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD275895186B6C4F00619CC0 /* Sparkle.framework */; };
 		CD2CA4301874B23700C554AC /* BWQuincyMain.nib in Resources */ = {isa = PBXBuildFile; fileRef = CD2CA4321874B23700C554AC /* BWQuincyMain.nib */; };
@@ -359,7 +358,6 @@
 			files = (
 				CD6D975C184A9DB50078A9AB /* InfoPlist.strings in Resources */,
 				CD13B082186A4E9100AF0EDA /* Localizable.strings in Resources */,
-				CD10788018B07D5B009E11E7 /* MoveApplication.strings in Resources */,
 				CD2CA4301874B23700C554AC /* BWQuincyMain.nib in Resources */,
 				CD6D976A184A9DB50078A9AB /* Images.xcassets in Resources */,
 				CD8CC8EF184BBC97005BDEF6 /* DefaultPreferenceValues.plist in Resources */,

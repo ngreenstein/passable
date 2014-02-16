@@ -8,7 +8,9 @@
 
 #import "PBLScrollingAction.h"
 
-// This one is simple: set a GlobalDomain pref and call a private API to notify apps of the change.
+#import "PBLConstants.h"
+
+// This one is simple: store the user's old direction and use a private API to set the new one.
 
 // Private API that lets us change the scroll direction without requiring a restart.
 typedef int CGSConnection;
@@ -19,22 +21,44 @@ extern void CGSSetSwipeScrollDirection(const CGSConnection connection, BOOL natu
 
 - (void)enableNow:(BOOL)enable {
 	
-//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	BOOL newDirectionToSet = enable;
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSError *error;
 	
-//	NSMutableDictionary *globalPrefs = [[defaults persistentDomainForName:NSGlobalDomain] mutableCopy];
+	if (enable) {
+		
+		id oldValue = [defaults objectForKey:kStoredScrollDirectionPrefKey];
+		if (oldValue) {
+			BOOL oldBool = [oldValue boolValue];
+			newDirectionToSet = oldBool;
+			[defaults removeObjectForKey:kStoredScrollDirectionPrefKey];
+		} else {
+			NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to restore user's previous scroll direction setting.", nil),
+										NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:NSLocalizedString(@"Unable to find stored scroll direction at defaults key '%@'.", nil), kStoredScrollDirectionPrefKey]};
+			error = [NSError errorWithDomain:kErrorDomain code:kErrorStoredValueNotFound userInfo:errorInfo];
+		}
+		
+	} else {
+		
+		NSDictionary *globalPrefs = [defaults persistentDomainForName:NSGlobalDomain];
+		BOOL naturalCurrentlyEnabled = [[globalPrefs valueForKey:kGlobalScrollingDirectionKey] boolValue];
+		[defaults setBool:naturalCurrentlyEnabled forKey:kStoredScrollDirectionPrefKey];
+		
+	}
     
     const CGSConnection connection = _CGSDefaultConnection();
-    CGSSetSwipeScrollDirection(connection, enable);
-
-	// Doesn't look like any of this is necessary.
-//  [globalPrefs setValue:[NSNumber numberWithBool:enable] forKey:@"com.apple.swipescrolldirection"];
-//    
-//  [defaults setPersistentDomain:globalPrefs forName:NSGlobalDomain];
-//	[defaults synchronize];
+    CGSSetSwipeScrollDirection(connection, newDirectionToSet);
 	
-//	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"SwipeScrollDirectionDidChangeNotification" object:nil userInfo:nil];
-	
-	[self.delegate action:self didEnable:enable withError:nil]; // No catchable errors here
+	if (![defaults synchronize]) {
+		NSMutableDictionary *errorInfo = [@{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to save preferences while enabling or disabling natural scrolling.", nil),
+											NSLocalizedFailureReasonErrorKey:NSLocalizedString(@"Unable to sync NSUserDefaults to when enabling or disabling natural scrolling..", nil)} mutableCopy];
+		if (error) {
+			NSLog(@"Uh oh. Multiple errors encountered when enabling or disabling natural scrolling. Old error saved in new error's userInfo dict.");
+			[errorInfo setObject:[error copy] forKey:kErrorOldErrorKey];
+		}
+		error = [NSError errorWithDomain:kErrorDomain code:kErrorUnableToSynchronizePrefs userInfo:errorInfo];
+	}
+	[self.delegate action:self didEnable:enable withError:error];
 }
 
 - (NSString *)description {

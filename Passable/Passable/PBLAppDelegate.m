@@ -289,7 +289,7 @@
 #pragma mark - Turning On and Off
 
 - (void)setEnabled:(BOOL)enabled asynchronously:(BOOL)async {
-	if (enabled != _enabled) {
+	if (_enabled != enabled) {
 		_enabled = enabled;
 		
 		[self.controlledActions enumerateObjectsUsingBlock:^(PBLAction *action, NSUInteger index, BOOL *stop) {
