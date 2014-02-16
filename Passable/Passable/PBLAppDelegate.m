@@ -172,7 +172,7 @@
 	[NSApp orderFrontStandardAboutPanel:self];
 }
 - (IBAction)helpClicked:(NSMenuItem *)sender {
-	[NSApp showHelp:self];
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://passableapp.com"]];
 }
 - (IBAction)quitClicked:(id)sender {
 	[[NSApplication sharedApplication] terminate:self];
