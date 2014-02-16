@@ -4,7 +4,7 @@ Your Mac is customized so you can work efficiently; you’re lost without your f
 
 Passable can, with a single click, set your Mac up so anyone can use it comfortably. Click its icon in the menu bar and it disables **hot corners**, **Notification Center alerts**, and the **natural scroll direction**, so you can safely pass your Mac to anyone.
 
-**[Download Passable](https://github.com/ngreenstein/passable/blob/gh-pages/downloads/Passable02.app.zip?raw=true)**  
+**[Download Passable](https://github.com/ngreenstein/passable/blob/gh-pages/downloads/Passable021.app.zip?raw=true)**  
 Requires OS X 10.9 Mavericks
 
 ## Using Passable
@@ -19,4 +19,4 @@ Control + click or **right - click its icon to customize** individually whether 
 
 [Code on GitHub](https://github.com/ngreenstein/passable)
 
-**[Download Passable](https://github.com/ngreenstein/passable/blob/gh-pages/downloads/Passable02.app.zip?raw=true)**
+**[Download Passable](https://github.com/ngreenstein/passable/blob/gh-pages/downloads/Passable021.app.zip?raw=true)**
