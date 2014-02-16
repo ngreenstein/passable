@@ -36,6 +36,8 @@
 @property (nonatomic) BOOL controlHotCorners;
 @property (nonatomic) BOOL controlScrolling;
 @property (nonatomic) BOOL controlNotifications;
+@property (nonatomic) BOOL openAtLogin;
+@property (nonatomic) BOOL activateOnOpen;
 
 @property (nonatomic) NSArray *controlledActions;
 @property (nonatomic) PBLHotCornersAction *hotCornersAction;
@@ -73,6 +75,10 @@
 	self.scrollingMenuItem.state = self.controlScrolling ? NSOnState : NSOffState;
 	self.controlNotifications = [defaults boolForKey:kControlNotificationsPrefKey];
 	self.notificationCenterMenuItem.state = self.controlNotifications ? NSOnState : NSOffState;
+	self.openAtLogin = [defaults boolForKey:kOpenAtLoginPrefsKey];
+	self.openAtLoginMenu.state = self.openAtLogin ? NSOnState : NSOffState;
+	self.activateOnOpen = [defaults boolForKey:kActivateOnOpenPrefsKey];
+	self.activateWhenOpenedMenu.state = self.activateOnOpen ? NSOnState : NSOffState;
 	
 	self.hotCornersAction = [[PBLHotCornersAction alloc] init];
 	self.hotCornersAction.delegate = self;
@@ -150,10 +156,11 @@
 	self.controlNotifications = (sender.state != NSOnState);
 }
 
-- (IBAction)openAtLoginClicked:(id)sender {
+- (IBAction)openAtLoginClicked:(NSMenuItem *)sender {
+	self.openAtLogin = (sender.state != NSOnState);
 }
-
-- (IBAction)activateWhenOpenedClicked:(id)sender {
+- (IBAction)activateWhenOpenedClicked:(NSMenuItem *)sender {
+	self.activateOnOpen = (sender.state != NSOnState);
 }
 
 - (IBAction)aboutClicked:(id)sender {
@@ -213,6 +220,30 @@
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 		if ([defaults boolForKey:kControlNotificationsPrefKey] != controlNotifications) {
 			[defaults setBool:controlNotifications forKey:kControlNotificationsPrefKey];
+			[defaults synchronize];
+		}
+	}
+}
+
+- (void)setOpenAtLogin:(BOOL)openAtLogin {
+	if (_openAtLogin != openAtLogin) {
+		_openAtLogin = openAtLogin;
+		self.openAtLoginMenu.state = openAtLogin ? NSOnState : NSOffState;
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		if ([defaults boolForKey:kOpenAtLoginPrefsKey] != openAtLogin) {
+			[defaults setBool:openAtLogin forKey:kOpenAtLoginPrefsKey];
+			[defaults synchronize];
+		}
+	}
+}
+
+- (void)setActivateOnOpen:(BOOL)activateOnOpen {
+	if (_activateOnOpen != activateOnOpen) {
+		_activateOnOpen = activateOnOpen;
+		self.activateWhenOpenedMenu.state = activateOnOpen ? NSOnState : NSOffState;
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		if ([defaults boolForKey:kActivateOnOpenPrefsKey] != activateOnOpen) {
+			[defaults setBool:activateOnOpen forKey:kActivateOnOpenPrefsKey];
 			[defaults synchronize];
 		}
 	}

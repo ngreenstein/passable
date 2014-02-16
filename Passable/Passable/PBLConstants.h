@@ -16,12 +16,14 @@ static NSString *const kMenuItemIconDisabledSuffix = @"Disabled";
 static NSString *const kMenuItemIconHighlightedSuffix = @"Highlighted";
 
 
-#pragma mark - MBA Preferences
+#pragma mark - Passable Preferences
 static NSString *const kDefaultPreferencesFileName = @"DefaultPreferenceValues";
 
 static NSString *const kControlHotCornersPrefKey = @"controlHotCornersEnabled";
 static NSString *const kControlScrollingPrefKey = @"controlScrollingEnabled";
 static NSString *const kControlNotificationsPrefKey = @"controlNotificationsEnabled";
+static NSString *const kOpenAtLoginPrefsKey = @"openAppAtLogin";
+static NSString *const kActivateOnOpenPrefsKey = @"activateAppOnOpen";
 
 static NSString *const kDoNotShowIntroWindowPrefKey = @"doNotShowIntroWindow";
 

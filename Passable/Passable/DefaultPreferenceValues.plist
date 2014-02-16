@@ -10,5 +10,9 @@
 	<true/>
 	<key>doNotShowIntroWindow</key>
 	<false/>
+	<key>openAppAtLogin</key>
+	<false/>
+	<key>activateAppOnOpen</key>
+	<false/>
 </dict>
 </plist>
