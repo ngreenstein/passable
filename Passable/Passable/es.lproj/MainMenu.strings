@@ -1,4 +1,7 @@
 
+/* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "139-3b-A4k"; */
+"139-3b-A4k.title" = "Buscar actualizaciones...";
+
 /* Class = "NSMenuItem"; title = "Quit"; ObjectID = "5FK-qn-6Ml"; */
 "5FK-qn-6Ml.title" = "Salir de Passable";
 
