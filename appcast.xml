@@ -5,23 +5,18 @@
 		<link>http://passableapp.com/appcast.xml</link>
 		<description>Most recent changes with links to updates.</description>
 		<language>en</language>
-		 <item>
-			<title>Version 0.1: First Beta Release</title>
+		
+		<item>
+			<title>Version 0.2.1: Crash Fix</title>
 			<description xml:lang="en"><![CDATA[
-				<h2>New in this Version</h2>
-				<ul>
-					<li>Everything</li>
-				</ul>
+				<p>Fixes a crash that occurred for some users when disabling hot corners.</p>
 			]]></description>
 			<description xml:lang="es"><![CDATA[
-				<h2>Novedades en esta versión</h2>
-				<ul>
-					<li>Todo</li>
-				</ul>
+				<p>Arregla un error que producía para algunos usuarios cuando desactivando esquinas activas.</p>
 			]]></description>
-			<pubDate>Sun, 5 Jan 2013 17:35:00 -0800</pubDate>
-			<enclosure url="http://passableapp.com/downloads/Passable01.app.zip" sparkle:version="0.1" length="1620167" type="application/octet-stream" />
-		 </item>
+			<pubDate>Sun, 16 Feb 2014 12:03:00 -0800</pubDate>
+			<enclosure url="http://passableapp.com/downloads/Passable021.app.zip" sparkle:version="2.0" length="1511082" type="application/octet-stream" />
+		</item>
 		 
 		 <item>
 		 	<title>Version 0.2: Public Beta</title>
@@ -36,15 +31,21 @@
 		 </item>
 		 
 		 <item>
-		  	<title>Version 0.2.1: Crash Fix</title>
-		  	<description xml:lang="en"><![CDATA[
-		  		<p>Fixes a crash that occurred for some users when disabling hot corners.</p>
-		  	]]></description>
-		  	<description xml:lang="es"><![CDATA[
-		  		<p>Arregla un error que producía para algunos usuarios cuando desactivando esquinas activas.</p>
-		  	]]></description>
-		  	<pubDate>Sun, 16 Feb 2014 12:03:00 -0800</pubDate>
-		  	<enclosure url="http://passableapp.com/downloads/Passable021.app.zip" sparkle:version="2.0" length="1511082" type="application/octet-stream" />
+		 	<title>Version 0.1: First Beta Release</title>
+		 	<description xml:lang="en"><![CDATA[
+		 		<h2>New in this Version</h2>
+		 		<ul>
+		 			<li>Everything</li>
+		 		</ul>
+		 	]]></description>
+		 	<description xml:lang="es"><![CDATA[
+		 		<h2>Novedades en esta versión</h2>
+		 		<ul>
+		 			<li>Todo</li>
+		 		</ul>
+		 	]]></description>
+		 	<pubDate>Sun, 5 Jan 2013 17:35:00 -0800</pubDate>
+		 	<enclosure url="http://passableapp.com/downloads/Passable01.app.zip" sparkle:version="0.1" length="1620167" type="application/octet-stream" />
 		  </item>
 
 	</channel>
