@@ -7,13 +7,13 @@
         <generator>Feeder 2.4.5(1806); Mac OS X Version 10.9.1 (Build 13B42) http://reinventedsoftware.com/feeder/</generator>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <language>en</language>
-        <pubDate>Sun, 16 Feb 2014 13:20:16 -0800</pubDate>
-        <lastBuildDate>Sun, 16 Feb 2014 13:20:16 -0800</lastBuildDate>
+        <pubDate>Sun, 16 Feb 2014 13:23:40 -0800</pubDate>
+        <lastBuildDate>Sun, 16 Feb 2014 13:23:40 -0800</lastBuildDate>
         <item>
             <title>Version 0.2.1: Bug Fixes</title>
             <description><![CDATA[Fixes a crash that occurred for some users when disabling hot corners.]]></description>
-            <pubDate>Sun, 16 Feb 2014 13:20:16 -0800</pubDate>
-            <enclosure url="http://passableapp.com/downloads/Passable021.app.zip" length="1511082" type="application/zip"/>
+            <pubDate>Sun, 16 Feb 2014 13:23:40 -0800</pubDate>
+            <enclosure url="https://passableapp.com/downloads/Passable021.app.zip" length="1511082" type="application/zip" sparkle:version="210" sparkle:shortVersionString="0.2.1"/>
             <guid isPermaLink="false">D9D61FB3-C93B-4DCC-B144-99810F4F868B</guid>
         </item>
     </channel>
