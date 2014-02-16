@@ -18,6 +18,7 @@
 #import "BWQuincyManager.h"
 #import "BWQuincyUI.h"
 #import "PFMoveApplication.h"
+#import <CoreServices/CoreServices.h>
 
 @interface PBLAppDelegate () <NSMenuDelegate, PBLStatusItemViewDelegate, PBLActionDelegate, BWQuincyManagerDelegate>
 
@@ -239,6 +240,7 @@
 			[defaults synchronize];
 		}
 	}
+	[self registerToOpenAtLogin:openAtLogin];
 }
 
 - (void)setActivateOnOpen:(BOOL)activateOnOpen {
@@ -251,6 +253,37 @@
 			[defaults synchronize];
 		}
 	}
+}
+
+- (void)registerToOpenAtLogin:(BOOL)openAtLogin {
+
+	LSSharedFileListRef listRef = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+	
+	if (openAtLogin) {
+		
+		LSSharedFileListInsertItemURL(listRef, kLSSharedFileListItemLast, NULL, NULL, (__bridge  CFURLRef)[[NSBundle mainBundle] bundleURL], NULL, NULL);
+		
+	} else {
+		
+		UInt32 seedValue;
+		NSArray *currentLoginItems = (__bridge NSArray *)LSSharedFileListCopySnapshot(listRef, &seedValue);
+		CFURLRef myUrl = (__bridge CFURLRef)([[NSBundle mainBundle] bundleURL]);
+
+		[currentLoginItems enumerateObjectsUsingBlock:^(id thisObject, NSUInteger idx, BOOL *stop) {
+			LSSharedFileListItemRef thisItem = (__bridge LSSharedFileListItemRef)thisObject;
+			CFURLRef thisUrl;
+			LSSharedFileListItemResolve(thisItem, 0, &thisUrl, NULL);
+			if (CFEqual(myUrl, thisUrl)) {
+				LSSharedFileListItemRemove(listRef, thisItem);
+				*stop = YES;
+			}
+			CFRelease(thisItem);
+			CFRelease(thisUrl);
+		}];
+		CFRelease(myUrl);
+	}
+	
+	CFRelease(listRef);
 }
 
 #pragma mark - Turning On and Off

@@ -33,6 +33,7 @@
 		CD8CC8EF184BBC97005BDEF6 /* DefaultPreferenceValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD8CC8EE184BBC97005BDEF6 /* DefaultPreferenceValues.plist */; };
 		CDA6087D186C97EC00E0AE3D /* BWQuincyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		CDA6087E186C97EC00E0AE3D /* BWQuincyUI.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA6087B186C97EC00E0AE3D /* BWQuincyUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		CDFB368718B11B9900B9C8BC /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFB368618B11B9900B9C8BC /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		CDA60879186C97EC00E0AE3D /* BWQuincyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWQuincyManager.m; sourceTree = "<group>"; };
 		CDA6087A186C97EC00E0AE3D /* BWQuincyUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWQuincyUI.h; sourceTree = "<group>"; };
 		CDA6087B186C97EC00E0AE3D /* BWQuincyUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWQuincyUI.m; sourceTree = "<group>"; };
+		CDFB368418B11A5100B9C8BC /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		CDFB368618B11B9900B9C8BC /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFB368718B11B9900B9C8BC /* CoreServices.framework in Frameworks */,
 				CD10787D18B07C06009E11E7 /* Security.framework in Frameworks */,
 				CD6D9752184A9DB50078A9AB /* Cocoa.framework in Frameworks */,
 				CD275896186B6C4F00619CC0 /* Sparkle.framework in Frameworks */,
@@ -182,10 +186,12 @@
 		CD6D9750184A9DB50078A9AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD10787C18B07C05009E11E7 /* Security.framework */,
+				CDFB368618B11B9900B9C8BC /* CoreServices.framework */,
 				CD10787B18B07AFE009E11E7 /* LetsMove */,
 				CDA60876186C97EC00E0AE3D /* QuincyKit */,
 				CD275895186B6C4F00619CC0 /* Sparkle.framework */,
+				CD10787C18B07C05009E11E7 /* Security.framework */,
+				CDFB368418B11A5100B9C8BC /* ApplicationServices.framework */,
 				CD6D9751184A9DB50078A9AB /* Cocoa.framework */,
 				CD6D9770184A9DB50078A9AB /* XCTest.framework */,
 				CD6D9753184A9DB50078A9AB /* Other Frameworks */,
