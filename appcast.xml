@@ -44,7 +44,7 @@
 		  		<p>Arregla un error que producía para algunos usuarios cuando desactivando esquinas activas.</p>
 		  	]]></description>
 		  	<pubDate>Sun, 16 Jan 2014 12:03:00 -0800</pubDate>
-		  	<enclosure url="http://passableapp.com/downloads/Passable021.app.zip" sparkle:version="0.2.1" length="1511082" type="application/octet-stream" />
+		  	<enclosure url="http://passableapp.com/downloads/Passable021.app.zip" sparkle:version="0.21" length="1511082" type="application/octet-stream" />
 		  </item>
 
 	</channel>
