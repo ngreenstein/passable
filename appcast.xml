@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
-   <channel>
-      <title>Menu Bar App Updates</title>
-      <link>http://passableapp.com/appcast.xml</link>
-      <description>Most recent changes with links to updates.</description>
-      <language>en</language>
-         <item>
-            <title>Version 0.1: First Beta Release</title>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"	xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Menu Bar App Updates</title>
+		<link>http://passableapp.com/appcast.xml</link>
+		<description>Most recent changes with links to updates.</description>
+		<language>en</language>
+		 <item>
+			<title>Version 0.1: First Beta Release</title>
 			<description xml:lang="en"><![CDATA[
 				<h2>New in this Version</h2>
 				<ul>
@@ -19,9 +19,21 @@
 					<li>Todo</li>
 				</ul>
 			]]></description>
-            <pubDate>Sun, 5 Jan 2013 17:35:00 -0800</pubDate>
-            <enclosure url="http://passableapp.com/downloads/Passable01.app.zip" sparkle:version="0.1" length="1620167" type="application/octet-stream" />
-         </item>
+			<pubDate>Sun, 5 Jan 2013 17:35:00 -0800</pubDate>
+			<enclosure url="http://passableapp.com/downloads/Passable01.app.zip" sparkle:version="0.1" length="1620167" type="application/octet-stream" />
+		 </item>
+		 
+		 <item>
+		 	<title>Version 0.2: Public Beta</title>
+		 	<description xml:lang="en"><![CDATA[
+		 		<strong>Welcome to the Passable public beta! Visit <a href="http://passableapp.com">passableapp.com</a> for more info.</a></strong>
+		 	]]></description>
+		 	<description xml:lang="es"><![CDATA[
+		 		<strong>¡Bienvenido al beta pública de Passable! Visita <a href="http://passableapp.com">passableapp.com</a> para más información.</a></strong>
+		 	]]></description>
+		 	<pubDate>Sun, 16 Jan 2014 10:55:00 -0800</pubDate>
+		 	<enclosure url="http://passableapp.com/downloads/Passable02.app.zip" sparkle:version="0.2" length="1628896" type="application/octet-stream" />
+		 </item>
 
 	</channel>
 </rss>
