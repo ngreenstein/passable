@@ -1,0 +1,18 @@
+section {
+	padding-bottom: 30px;
+}
+
+section p:last-child {
+	margin-bottom: 0;
+}
+
+footer {
+	margin-top: -140px;
+	margin-bottom: auto;
+	bottom: auto;
+	position: relative;
+}
+
+strong a {
+	font-weight: bold;
+}
