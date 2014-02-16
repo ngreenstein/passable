@@ -16,8 +16,8 @@
 #import "PBLNotificationsAction.h"
 
 #import "BWQuincyManager.h"
-
 #import "BWQuincyUI.h"
+#import "PFMoveApplication.h"
 
 @interface PBLAppDelegate () <NSMenuDelegate, PBLStatusItemViewDelegate, PBLActionDelegate, BWQuincyManagerDelegate>
 
@@ -45,6 +45,8 @@
 @implementation PBLAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	
+	PFMoveToApplicationsFolderIfNecessary();
 	
 	self.enabled = NO;
 	
