@@ -156,9 +156,6 @@
 - (IBAction)activateWhenOpenedClicked:(id)sender {
 }
 
-- (IBAction)donateClicked:(NSMenuItem *)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.ngreenstein.com/passable/donate.html"]];
-}
 - (IBAction)aboutClicked:(id)sender {
 	[NSApp orderFrontStandardAboutPanel:self];
 }

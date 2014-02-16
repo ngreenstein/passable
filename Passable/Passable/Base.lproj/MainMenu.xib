@@ -48,12 +48,6 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="ZOw-mQ-3LJ"/>
-                <menuItem title="Donate" id="8Vv-O3-Ltc">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="donateClicked:" target="494" id="2Zn-fR-S1I"/>
-                    </connections>
-                </menuItem>
                 <menuItem title="About Passable" id="6Lf-QC-aoS">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -87,7 +81,6 @@
             <connections>
                 <outlet property="aboutMenuItem" destination="6Lf-QC-aoS" id="IBT-qB-Fgl"/>
                 <outlet property="activateWhenOpenedMenu" destination="8gh-Pv-3bz" id="zMN-Ee-EeR"/>
-                <outlet property="donateMenuItem" destination="8Vv-O3-Ltc" id="rCT-4v-aLW"/>
                 <outlet property="hotCornersMenuItem" destination="yyX-CL-q4X" id="BWv-0V-Gih"/>
                 <outlet property="menu" destination="Nwc-jS-A6r" id="5YL-NQ-0if"/>
                 <outlet property="notificationCenterMenuItem" destination="eSx-p1-YCx" id="dGV-QS-Ojq"/>

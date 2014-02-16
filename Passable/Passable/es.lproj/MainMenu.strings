@@ -8,9 +8,6 @@
 /* Class = "NSMenuItem"; title = "About AppName"; ObjectID = "6Lf-QC-aoS"; */
 "6Lf-QC-aoS.title" = "Acerca de Passable";
 
-/* Class = "NSMenuItem"; title = "Donate"; ObjectID = "8Vv-O3-Ltc"; */
-"8Vv-O3-Ltc.title" = "Donar";
-
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "HAX-dy-F6T"; */
 "HAX-dy-F6T.title" = "Ayuda";
 
