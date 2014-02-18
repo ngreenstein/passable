@@ -17,6 +17,7 @@ Control + click or **right - click its icon to customize** individually whether 
 
 # Learn More
 
-[Code on GitHub](https://github.com/ngreenstein/passable)
+[Code on GitHub](https://github.com/ngreenstein/passable)  
+Get in touch: [@ngreenstein](https://twitter.com/ngreenstein)
 
 **[Download Passable](https://github.com/ngreenstein/passable/blob/gh-pages/downloads/Passable021.app.zip?raw=true)**
