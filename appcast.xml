@@ -13,7 +13,7 @@
             <title>Version 0.2.1: Bug Fixes</title>
             <description><![CDATA[Fixes a crash that occurred for some users when disabling hot corners.]]></description>
             <pubDate>Sun, 16 Feb 2014 13:34:00 -0800</pubDate>
-            <enclosure url="http://passableapp.com/downloads/Passable021.app.zip" length="1628197" type="application/zip" sparkle:version="210" sparkle:shortVersionString="0.2.1"/>
+            <enclosure url="https://github.com/ngreenstein/passable/blob/gh-pages/downloads/Passable021.app.zip?raw=true" length="1628197" type="application/zip" sparkle:version="210" sparkle:shortVersionString="0.2.1"/>
         </item>
     </channel>
 </rss>
